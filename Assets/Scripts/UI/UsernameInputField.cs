@@ -36,8 +36,7 @@ namespace UI
         {
             if (string.IsNullOrWhiteSpace(username))
             {
-                // TODO: Should be changed by the Notification in future
-                Debug.LogError("Username field is not valid!");
+                Notification.Instance.ErrorMessage("Enter valid username!");
                 return;
             }
 
