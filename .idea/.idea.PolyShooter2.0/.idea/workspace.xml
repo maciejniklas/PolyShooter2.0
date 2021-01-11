@@ -4,8 +4,6 @@
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CanvasDefault.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CanvasDefault.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +15,10 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/CanvasDontDestroy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -80,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610393990357</updated>
       <workItem from="1610393998899" duration="2000" />
-      <workItem from="1610395546755" duration="2956000" />
+      <workItem from="1610395546755" duration="4282000" />
     </task>
     <servers />
   </component>
@@ -89,6 +88,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

@@ -635,6 +635,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Masters" t="Include">
+            <e p="PhotonMaster.cs" t="Include" />
+          </e>
           <e p="UI" t="Include">
             <e p="CanvasDontDestroy.cs" t="Include" />
             <e p="Notification.cs" t="Include" />
