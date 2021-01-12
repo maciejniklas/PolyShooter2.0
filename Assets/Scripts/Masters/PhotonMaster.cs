@@ -81,6 +81,16 @@ namespace Masters
             SceneManager.LoadScene((int) SceneType.Lobby);
         }
 
+        public override void OnPlayerEnteredRoom(Player newPlayer)
+        {
+            Notification.Instance.InfoMessage($"{newPlayer.NickName} entered room.");
+        }
+
+        public override void OnPlayerLeftRoom(Player otherPlayer)
+        {
+            Notification.Instance.InfoMessage($"{otherPlayer.NickName} left room.");
+        }
+
         public void ConnectAndJoin()
         {
             if (PhotonNetwork.IsConnected)
