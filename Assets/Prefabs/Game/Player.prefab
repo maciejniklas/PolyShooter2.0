@@ -34,6 +34,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5459665334529545163}
+  - {fileID: 7519374868097189191}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -95,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   jumpForce: 4
+  groundSensor: {fileID: 2641738684791659252}
 --- !u!114 &5931754590448391620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,5 +260,97 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &4119193232068285856
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1883050355846269320}
+    m_Modifications:
+    - target: {fileID: 5868330991410565351, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868330991410565351, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868330991410565351, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868330991410565351, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868330991410565351, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868330991410565351, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868330991410565351, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868330991410565351, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868330991410565351, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868330991410565351, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868330991410565351, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453000638842428086, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_Name
+      value: GroundSensor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453000638842428086, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f0a4fd48bc163445946b2d6535d6f3e, type: 3}
+--- !u!4 &7519374868097189191 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5868330991410565351, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4119193232068285856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2641738684791659252 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2126551411229822804, guid: 6f0a4fd48bc163445946b2d6535d6f3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4119193232068285856}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5e4334acf841e6b13c3e4a9d6ccc73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

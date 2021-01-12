@@ -4,14 +4,8 @@
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sandbox.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraMouseControlModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraMouseControlModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/SceneType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/SceneType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwitchToLobbyIfOffline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/SwitchToLobbyIfOffline.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwitchToLobbyIfOffline.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/SwitchToLobbyIfOffline.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/MovementModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/MovementModule.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +46,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPoint.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerModule.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/MovementModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraControllModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraControlModule.cs" />
@@ -61,6 +54,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SwitchToLobbyIfOffline.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/ReleaseCursorAfterButtonDown.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraMouseControlModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/GroundSensor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/TriggerSensor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/MovementModule.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -131,7 +127,7 @@
       <workItem from="1610393998899" duration="2000" />
       <workItem from="1610395546755" duration="4492000" />
       <workItem from="1610433280104" duration="11185000" />
-      <workItem from="1610466049466" duration="4041000" />
+      <workItem from="1610466049466" duration="5316000" />
     </task>
     <servers />
   </component>

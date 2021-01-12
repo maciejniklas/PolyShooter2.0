@@ -1,5 +1,7 @@
-﻿using Photon.Pun;
+﻿using System;
+using Photon.Pun;
 using UnityEngine;
+using Utilities;
 
 namespace Characters.Player
 {
@@ -9,12 +11,17 @@ namespace Characters.Player
     [RequireComponent(typeof(Rigidbody))]
     public class MovementModule : MonoBehaviourPun
     {
+        [Header("General")]
         [SerializeField] private float speed = 4;
         [SerializeField] private float jumpForce = 4;
+
+        [Header("Ground detection")]
+        [SerializeField] private TriggerSensor groundSensor;
         
         private Vector2 _userInput;
         private Vector3 _movementDirection;
         private Rigidbody _rigidbody;
+        private bool _isGrounded;
         
         private void Awake()
         {
@@ -28,11 +35,19 @@ namespace Characters.Player
             _rigidbody = GetComponent<Rigidbody>();
         }
 
+        private void Start()
+        {
+            groundSensor.gameObject.SetActive(true);
+        }
+
         private void Update()
         {
             // Grab user input
-            _userInput.x = Input.GetAxis("Horizontal");
-            _userInput.y = Input.GetAxis("Vertical");
+            if (_isGrounded)
+            {
+                _userInput.x = Input.GetAxis("Horizontal");
+                _userInput.y = Input.GetAxis("Vertical");
+            }
             
             // Compute the direction
             _movementDirection = (transform.right * _userInput.x + transform.forward * _userInput.y).normalized;
@@ -48,6 +63,21 @@ namespace Characters.Player
         {
             // Move
             _rigidbody.MovePosition(transform.position + _movementDirection * (Time.deltaTime * speed));
+        }
+
+        private void OnDisable()
+        {
+            groundSensor.OnTriggerChangeDetection -= UpdateGroundedInfo;
+        }
+
+        private void OnEnable()
+        {
+            groundSensor.OnTriggerChangeDetection += UpdateGroundedInfo;
+        }
+
+        private void UpdateGroundedInfo(bool isInside)
+        {
+            _isGrounded = isInside;
         }
     }
 }

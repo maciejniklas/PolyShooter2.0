@@ -660,6 +660,7 @@
             <e p="ReleaseCursorAfterButtonDown.cs" t="Include" />
             <e p="SceneType.cs" t="Include" />
             <e p="SwitchToLobbyIfOffline.cs" t="Include" />
+            <e p="TriggerSensor.cs" t="Include" />
           </e>
         </e>
       </e>
