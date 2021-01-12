@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Interfaces/ILiving.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Interfaces/ILiving.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Female Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Female Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Policeman Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Policeman Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/TownFemale Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TownFemale Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sandbox.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +60,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/TriggerSensor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/MovementModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Interfaces/ILiving.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySliderType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySlider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/KeepTryingUntilYouSucceed.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" />
     </changedPaths>
   </component>
@@ -127,7 +134,7 @@
       <workItem from="1610393998899" duration="2000" />
       <workItem from="1610395546755" duration="4492000" />
       <workItem from="1610433280104" duration="11185000" />
-      <workItem from="1610466049466" duration="11707000" />
+      <workItem from="1610466049466" duration="14997000" />
     </task>
     <servers />
   </component>

@@ -61,18 +61,23 @@ namespace Characters.Player
 
         private void Start()
         {
-            if (photonView.IsMine)
-            {
-                InitializeFpp();
-            }
+            if (!photonView.IsMine) return;
+            
+            // Initialize FPP camera
+            visualRepresentation.SetActive(false);
+            virtualCamera.SetActive(true);
+                
+            // Initialize ILiving HUD
+            OnHealthValueChanged?.Invoke(Health);
+            OnStaminaValueChanged?.Invoke(Stamina);
         }
 
         private void Update()
         {
             if (!photonView.IsMine) return;
 
-            // Editor testing features
-            if (Application.isEditor)
+            // Testing features
+            if (Application.isEditor || Debug.isDebugBuild)
             {
                 if (Input.GetKeyDown(KeyCode.Alpha0))
                 {
@@ -193,12 +198,6 @@ namespace Characters.Player
                 IsAfterActivity = true;
             }
             StartCoroutine(RestTimer());
-        }
-
-        private void InitializeFpp()
-        {
-            visualRepresentation.SetActive(false);
-            virtualCamera.SetActive(true);
         }
     }
 }
