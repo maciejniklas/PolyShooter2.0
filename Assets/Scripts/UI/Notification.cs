@@ -7,7 +7,6 @@ namespace UI
     /// <summary>
     /// Message text displayed at the top left corner of the screen. Available types of notification are information and error. Should be placed inside of Canvas that don't destroy on other scene load.
     /// </summary>
-    [RequireComponent(typeof(Text))]
     public class Notification : MonoBehaviour
     {
         [SerializeField] private float visibleTimeInSeconds = 5f;
@@ -25,11 +24,12 @@ namespace UI
             // Singleton
             if (Instance != null)
             {
-                Destroy((gameObject));
+                Destroy(gameObject);
             }
             else
             {
                 Instance = this;
+                DontDestroyOnLoad(gameObject);
             }
             
             // Initialization

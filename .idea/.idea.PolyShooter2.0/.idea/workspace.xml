@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/CanvasDontDestroy Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/CanvasDontDestroy Variant.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +23,6 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/CanvasDontDestroy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LobbyStateMachine.cs" />
@@ -30,6 +31,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/StateMachine.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LobbyPageState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/BaseState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/SingleSceneSingleton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Singleton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -58,7 +62,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="Inspections-C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -91,7 +95,7 @@
       <updated>1610393990357</updated>
       <workItem from="1610393998899" duration="2000" />
       <workItem from="1610395546755" duration="4492000" />
-      <workItem from="1610433280104" duration="3279000" />
+      <workItem from="1610433280104" duration="5277000" />
     </task>
     <servers />
   </component>
@@ -114,5 +118,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
