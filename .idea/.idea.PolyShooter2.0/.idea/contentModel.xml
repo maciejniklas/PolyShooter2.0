@@ -647,6 +647,7 @@
           <e p="UI" t="Include">
             <e p="LobbyPageState.cs" t="Include" />
             <e p="Notification.cs" t="Include" />
+            <e p="PlayButtonInteractable.cs" t="Include" />
             <e p="UsernameInputField.cs" t="Include" />
           </e>
         </e>
