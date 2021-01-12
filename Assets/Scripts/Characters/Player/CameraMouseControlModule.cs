@@ -23,6 +23,9 @@ namespace Characters.Player
 
         private void Update()
         {
+            // Dont' move when cursor is visible
+            if(Cursor.visible) return;
+            
             // Grab mouse input
             _mouseInput.x = Input.GetAxis("Mouse X");
             _mouseInput.y = Input.GetAxis("Mouse Y");

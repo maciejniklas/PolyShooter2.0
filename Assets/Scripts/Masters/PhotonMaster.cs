@@ -3,6 +3,7 @@ using Photon.Realtime;
 using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utilities;
 
 namespace Masters
 {
