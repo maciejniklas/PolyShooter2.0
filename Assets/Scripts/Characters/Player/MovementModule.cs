@@ -9,7 +9,8 @@ namespace Characters.Player
     [RequireComponent(typeof(Rigidbody))]
     public class MovementModule : MonoBehaviourPun
     {
-        [SerializeField] private float speed = 3;
+        [SerializeField] private float speed = 4;
+        [SerializeField] private float jumpForce = 4;
         
         private Vector2 _userInput;
         private Vector3 _movementDirection;
@@ -35,10 +36,17 @@ namespace Characters.Player
             
             // Compute the direction
             _movementDirection = (transform.right * _userInput.x + transform.forward * _userInput.y).normalized;
+            
+            // Detect jump
+            if (Input.GetButtonDown("Jump"))
+            {
+                _rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+            }
         }
 
         private void FixedUpdate()
         {
+            // Move
             _rigidbody.MovePosition(transform.position + _movementDirection * (Time.deltaTime * speed));
         }
     }
