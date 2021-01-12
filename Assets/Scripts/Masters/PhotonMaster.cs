@@ -29,8 +29,6 @@ namespace Masters
             PhotonNetwork.GameVersion = Application.version;
             // Force players to have synchronized levels
             PhotonNetwork.AutomaticallySyncScene = true;
-            
-            ConnectAndJoin();
         }
 
         public override void OnConnectedToMaster()
@@ -66,7 +64,7 @@ namespace Masters
             PhotonNetwork.CreateRoom(null, new RoomOptions());
         }
 
-        private void ConnectAndJoin()
+        public void ConnectAndJoin()
         {
             if (PhotonNetwork.IsConnected)
             {
