@@ -67,11 +67,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cowboy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5459665334529545163, guid: 1ce72154ece42f448ae6ad7ce9269205,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5931754590448391620, guid: 1ce72154ece42f448ae6ad7ce9269205,
         type: 3}
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7369548072417558113, guid: 1ce72154ece42f448ae6ad7ce9269205,
+        type: 3}
+      propertyPath: visualRepresentation
+      value: 
+      objectReference: {fileID: 5340255122464750386}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ce72154ece42f448ae6ad7ce9269205, type: 3}
 --- !u!4 &4144246325129800256 stripped
@@ -137,3 +147,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e332982425ee2ec48b168979bb7b43f5, type: 3}
+--- !u!1 &5340255122464750386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1849736199912346, guid: e332982425ee2ec48b168979bb7b43f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5339852910671364264}
+  m_PrefabAsset: {fileID: 0}

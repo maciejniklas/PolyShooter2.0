@@ -67,11 +67,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Female Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5459665334529545163, guid: 1ce72154ece42f448ae6ad7ce9269205,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5931754590448391620, guid: 1ce72154ece42f448ae6ad7ce9269205,
         type: 3}
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7369548072417558113, guid: 1ce72154ece42f448ae6ad7ce9269205,
+        type: 3}
+      propertyPath: visualRepresentation
+      value: 
+      objectReference: {fileID: 1323487145748209432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ce72154ece42f448ae6ad7ce9269205, type: 3}
 --- !u!4 &1530640994459546429 stripped
@@ -137,3 +147,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc89cff11dc72544faaaa69b501fd596, type: 3}
+--- !u!1 &1323487145748209432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1965410809269166, guid: bc89cff11dc72544faaaa69b501fd596,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322654265067558070}
+  m_PrefabAsset: {fileID: 0}
