@@ -637,6 +637,7 @@
         <e p="Scripts" t="Include">
           <e p="Characters" t="Include">
             <e p="Player" t="Include">
+              <e p="CameraMouseControlModule.cs" t="Include" />
               <e p="MovementModule.cs" t="Include" />
               <e p="PlayerModule.cs" t="Include" />
             </e>
