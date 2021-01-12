@@ -636,6 +636,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Masters" t="Include">
+            <e p="LevelMaster.cs" t="Include" />
             <e p="PhotonMaster.cs" t="Include" />
           </e>
           <e p="Patterns" t="Include">
