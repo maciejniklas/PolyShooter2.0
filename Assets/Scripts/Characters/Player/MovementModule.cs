@@ -1,5 +1,4 @@
-﻿using System;
-using Photon.Pun;
+﻿using Photon.Pun;
 using UnityEngine;
 using Utilities;
 
@@ -13,6 +12,7 @@ namespace Characters.Player
     {
         [Header("General")]
         [SerializeField] private float speed = 4;
+        [SerializeField] private float sprintSpeedValueBoost = 2f;
         [SerializeField] private float jumpForce = 4;
 
         [Header("Ground detection")]
@@ -56,6 +56,16 @@ namespace Characters.Player
             if (Input.GetButtonDown("Jump"))
             {
                 _rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+            }
+            
+            // Detect sprint
+            if (Input.GetButtonDown("Sprint"))
+            {
+                speed += sprintSpeedValueBoost;
+            }
+            else if (Input.GetButtonUp("Sprint"))
+            {
+                speed -= sprintSpeedValueBoost;
             }
         }
 
