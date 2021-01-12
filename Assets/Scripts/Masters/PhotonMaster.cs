@@ -55,6 +55,8 @@ namespace Masters
         public override void OnJoinedRoom()
         {
             Notification.Instance.InfoMessage("Successfully joined room.");
+            
+            PhotonNetwork.LoadLevel((int) SceneType.Sandbox);
         }
 
         public override void OnJoinRandomFailed(short returnCode, string message)
