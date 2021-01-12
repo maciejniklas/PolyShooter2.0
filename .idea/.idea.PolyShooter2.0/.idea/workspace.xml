@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/TriggerSensor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/TriggerSensor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/MovementModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/MovementModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/TriggerSensor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/TriggerSensor.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,6 +18,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Patterns/BaseState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -35,8 +50,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPoint.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerModule.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraControllModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraControlModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SceneType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SwitchToLobbyIfOffline.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/ReleaseCursorAfterButtonDown.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraMouseControlModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/GroundSensor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/TriggerSensor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/MovementModule.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -107,6 +131,7 @@
       <workItem from="1610393998899" duration="2000" />
       <workItem from="1610395546755" duration="4492000" />
       <workItem from="1610433280104" duration="11185000" />
+      <workItem from="1610466049466" duration="7053000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,7 @@ using Photon.Realtime;
 using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utilities;
 
 namespace Masters
 {
@@ -65,6 +66,9 @@ namespace Masters
             Notification.Instance.InfoMessage("Successfully joined room.");
             
             PhotonNetwork.LoadLevel((int) SceneType.Sandbox);
+
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         public override void OnJoinRandomFailed(short returnCode, string message)
@@ -88,6 +92,9 @@ namespace Masters
             }
 
             SceneManager.LoadScene((int) SceneType.Lobby);
+
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
 
         public override void OnPlayerEnteredRoom(Player newPlayer)
