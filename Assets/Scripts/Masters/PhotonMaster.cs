@@ -2,12 +2,15 @@
 using Photon.Realtime;
 using UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Masters
 {
     public class PhotonMaster : MonoBehaviourPunCallbacks
     {
         public static PhotonMaster Instance { get; private set; }
+
+        private static bool _isConnecting;
 
         private void Awake()
         {
@@ -21,6 +24,9 @@ namespace Masters
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
             }
+            
+            // Initialization
+            _isConnecting = false;
         }
 
         private void Start()
@@ -35,7 +41,9 @@ namespace Masters
         {
             Notification.Instance.InfoMessage("Successfully connected to master server.");
 
+            if (!_isConnecting) return;
             PhotonNetwork.JoinRandomRoom();
+            _isConnecting = false;
         }
 
         public override void OnDisconnected(DisconnectCause cause)
@@ -66,6 +74,13 @@ namespace Masters
             PhotonNetwork.CreateRoom(null, new RoomOptions());
         }
 
+        public override void OnLeftRoom()
+        {
+            Notification.Instance.InfoMessage("Successfully left room.");
+
+            SceneManager.LoadScene((int) SceneType.Lobby);
+        }
+
         public void ConnectAndJoin()
         {
             if (PhotonNetwork.IsConnected)
@@ -74,8 +89,13 @@ namespace Masters
             }
             else
             {
-                PhotonNetwork.ConnectUsingSettings();
+                _isConnecting = PhotonNetwork.ConnectUsingSettings();
             }
+        }
+
+        public void LeaveRoom()
+        {
+            PhotonNetwork.LeaveRoom();
         }
     }
 }
