@@ -1,4 +1,6 @@
-﻿namespace Characters.Interfaces
+﻿using System.Collections;
+
+namespace Characters.Interfaces
 {
     /// <summary>
     /// Implements behaviour of living creature
@@ -7,15 +9,24 @@
     {
         float Health { get; }
         float HealthRegenerationPerSecond { get; }
+        bool IsAbleToTire { get; }
+        bool IsAfterActivity { get; }
+        bool IsAlive { get; }
+        bool IsTarget { get; }
         float MaxHealth { get; }
         float MaxStamina { get; }
         float Stamina { get; }
         float StaminaRegenerationPerSecond { get; }
+        float TimeToBeSafeInSeconds { get; }
+        float TimeToRestInSeconds { get; }
 
         void Death();
+        void HealthRegeneration();
         void Hurt(float damage);
+        IEnumerator RestTimer();
+        IEnumerator SafeTimer();
+        void StaminaRegeneration();
         void Tire(float effortCost);
-        void Regeneration();
 
         event OnDeathEventHandler OnDeath;
         event OnHealthValueChangedEventHandler OnHealthValueChanged;
