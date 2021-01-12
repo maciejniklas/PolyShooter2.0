@@ -48,7 +48,16 @@ namespace Masters
 
         public override void OnDisconnected(DisconnectCause cause)
         {
-            Debug.LogWarning($"Disconnected from server. Caused by: {cause.ToString()}");
+            var messageText = $"Disconnected from server. Caused by: {cause.ToString()}";
+
+            if (Notification.Instance != null)
+            {
+                Notification.Instance.ErrorMessage(messageText);
+            }
+            else
+            {
+                Debug.LogWarning(messageText);
+            }
         }
 
         public override void OnJoinedRoom()
@@ -67,7 +76,16 @@ namespace Masters
 
         public override void OnLeftRoom()
         {
-            Notification.Instance.InfoMessage("Successfully left room.");
+            const string messageText = "Successfully left room.";
+
+            if (Notification.Instance != null)
+            {
+                Notification.Instance.ErrorMessage(messageText);
+            }
+            else
+            {
+                Debug.LogWarning(messageText);
+            }
 
             SceneManager.LoadScene((int) SceneType.Lobby);
         }
