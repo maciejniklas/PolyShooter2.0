@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 967485440608738604}
   - component: {fileID: 6299046996977059149}
   - component: {fileID: 7369548072417558113}
+  - component: {fileID: 3186686478778951211}
   - component: {fileID: 5931754590448391620}
   m_Layer: 0
   m_Name: Player
@@ -79,6 +80,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 2361829090332387267}
   visualRepresentation: {fileID: 0}
+--- !u!114 &3186686478778951211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885586793745887050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e9068bf2355410abad44418f85a32eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
 --- !u!114 &5931754590448391620
 MonoBehaviour:
   m_ObjectHideFlags: 0
