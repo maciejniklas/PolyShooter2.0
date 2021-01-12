@@ -1,6 +1,5 @@
 ﻿using Photon.Pun;
 using UnityEngine;
-using Utilities;
 
 namespace Characters.Player
 {
@@ -16,7 +15,9 @@ namespace Characters.Player
         [SerializeField] private float jumpForce = 4;
 
         [Header("Ground detection")]
-        [SerializeField] private TriggerSensor groundSensor;
+        [SerializeField] private Transform groundSensor;
+        [SerializeField] private float groundCheckDistance = 0.1f;
+        [SerializeField] private LayerMask groundLayer;
         
         private Vector2 _userInput;
         private Vector3 _movementDirection;
@@ -71,18 +72,11 @@ namespace Characters.Player
 
         private void FixedUpdate()
         {
+            // Detect ground
+            _isGrounded = Physics.CheckSphere(groundSensor.position, groundCheckDistance, groundLayer);
+            
             // Move
             _rigidbody.MovePosition(transform.position + _movementDirection * (Time.deltaTime * speed));
-        }
-
-        private void OnDisable()
-        {
-            groundSensor.OnTriggerChangeDetection -= UpdateGroundedInfo;
-        }
-
-        private void OnEnable()
-        {
-            groundSensor.OnTriggerChangeDetection += UpdateGroundedInfo;
         }
 
         private void UpdateGroundedInfo(bool isInside)
