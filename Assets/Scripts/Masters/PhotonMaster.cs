@@ -48,16 +48,7 @@ namespace Masters
 
         public override void OnDisconnected(DisconnectCause cause)
         {
-            var messageText = $"Disconnected from server. Caused by: {cause.ToString()}";
-
-            if (Notification.Instance != null)
-            {
-                Notification.Instance.ErrorMessage(messageText);
-            }
-            else
-            {
-                Debug.LogWarning(messageText);
-            }
+            Debug.LogWarning($"Disconnected from server. Caused by: {cause.ToString()}");
         }
 
         public override void OnJoinedRoom()
