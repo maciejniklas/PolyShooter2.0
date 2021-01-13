@@ -674,6 +674,7 @@
               <e p="Firearm.cs" t="Include" />
             </e>
             <e p="Interfaces" t="Include">
+              <e p="IShootable.cs" t="Include" />
               <e p="IWeapon.cs" t="Include" />
             </e>
           </e>
