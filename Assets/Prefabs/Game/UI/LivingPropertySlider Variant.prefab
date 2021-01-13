@@ -133,7 +133,12 @@ PrefabInstance:
     - target: {fileID: 863575297368310728, guid: 5c3d49c4966e4044e832e3e64fb472ba,
         type: 3}
       propertyPath: m_Name
-      value: LivingPropertySlider
+      value: LivingPropertySlider Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 863575297368310734, guid: 5c3d49c4966e4044e832e3e64fb472ba,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 863575297368310735, guid: 5c3d49c4966e4044e832e3e64fb472ba,
         type: 3}
