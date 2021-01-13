@@ -38,6 +38,9 @@ namespace Characters.Player
         public event OnHealthValueChangedEventHandler OnHealthValueChanged;
         public event OnStaminaValueChangedEventHandler OnStaminaValueChanged;
 
+        private IEnumerator _restTimerCoroutine;
+        private IEnumerator _safeTimerCoroutine;
+
         private void Awake()
         {
             // Parameters initialization
@@ -45,6 +48,9 @@ namespace Characters.Player
             Stamina = MaxStamina;
             IsAfterActivity = false;
             IsTarget = false;
+
+            _restTimerCoroutine = RestTimer();
+            _safeTimerCoroutine = SafeTimer();
             
             if (!photonView.IsMine) return;
             
@@ -147,25 +153,28 @@ namespace Characters.Player
             // Update IsTarget flag
             if (IsTarget)
             {
-                StopCoroutine(SafeTimer());
+                StopCoroutine(_safeTimerCoroutine);
+                _safeTimerCoroutine = SafeTimer();
             }
             else
             {
                 IsTarget = true;
             }
-            StartCoroutine(SafeTimer());
+            StartCoroutine(_safeTimerCoroutine);
         }
 
         public IEnumerator RestTimer()
         {
             yield return new WaitForSeconds(TimeToRestInSeconds);
             IsAfterActivity = false;
+            _restTimerCoroutine = RestTimer();
         }
 
         public IEnumerator SafeTimer()
         {
             yield return new WaitForSeconds(TimeToBeSafeInSeconds);
             IsTarget = false;
+            _safeTimerCoroutine = SafeTimer();
         }
 
         public void StaminaRegeneration()
@@ -191,13 +200,14 @@ namespace Characters.Player
             // Update IsAfterActivity flag
             if (IsAfterActivity)
             {
-                StopCoroutine(RestTimer());
+                StopCoroutine(_restTimerCoroutine);
+                _restTimerCoroutine = RestTimer();
             }
             else
             {
                 IsAfterActivity = true;
             }
-            StartCoroutine(RestTimer());
+            StartCoroutine(_restTimerCoroutine);
         }
     }
 }
