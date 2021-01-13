@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  bulletsPerMagazine: 16
+  fireRate: 2
+  initialMagazines: 2
+  range: 30
 --- !u!1001 &5978910028694815330
 PrefabInstance:
   m_ObjectHideFlags: 0
