@@ -9,7 +9,7 @@ namespace Weapons.Interfaces
     {
         float Damage { get; }
         GameObject Instance { get; }
-        GameObject Owner { get; }
+        GameObject Owner { get; set; }
 
         void Attack();
 

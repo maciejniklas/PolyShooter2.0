@@ -668,6 +668,9 @@
             <e p="SwitchToLobbyIfOffline.cs" t="Include" />
           </e>
           <e p="Weapons" t="Include">
+            <e p="Guns" t="Include">
+              <e p="Firearm.cs" t="Include" />
+            </e>
             <e p="Interfaces" t="Include">
               <e p="IWeapon.cs" t="Include" />
             </e>
