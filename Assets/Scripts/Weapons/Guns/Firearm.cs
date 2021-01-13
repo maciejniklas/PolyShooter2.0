@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Photon.Pun;
 using UI;
 using UnityEngine;
@@ -6,9 +7,10 @@ using Weapons.Interfaces;
 
 namespace Weapons.Guns
 {
-    public class Firearm : MonoBehaviourPun, IWeapon, IShootable
+    public abstract class Firearm : MonoBehaviourPun, IWeapon, IShootable
     {
         [Header("General")]
+        [SerializeField] protected Transform shotStartPoint;
         [SerializeField] protected float damage = 10f;
         [SerializeField] protected int bulletsPerMagazine;
         [Tooltip("Describes how many shots are allowed per one second.")]
@@ -16,7 +18,7 @@ namespace Weapons.Guns
         [SerializeField] protected int initialMagazines;
         [SerializeField] protected float range;
 
-        public int BulletsInMagazine { get; private set; }
+        public int BulletsInMagazine { get; protected set; }
         public int BulletsPerMagazine => bulletsPerMagazine;
         public float Damage => damage;
         public float FireRate => fireRate;
@@ -31,6 +33,7 @@ namespace Weapons.Guns
         public event OnWeaponAttackEventHandler OnWeaponAttack;
 
         protected bool _isAbleToShoot;
+        protected RaycastHit hit;
 
         protected virtual void Awake()
         {
@@ -52,10 +55,7 @@ namespace Weapons.Guns
             }
         }
 
-        public void Attack()
-        {
-            Debug.Log("Attack");
-        }
+        public abstract void Attack();
 
         public IEnumerator FireRateCooldown()
         {
@@ -80,6 +80,12 @@ namespace Weapons.Guns
             BulletsInMagazine = BulletsPerMagazine;
             
             OnReload?.Invoke(BulletsInMagazine, Magazines);
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position, transform.position + transform.forward * range);
         }
     }
 }
