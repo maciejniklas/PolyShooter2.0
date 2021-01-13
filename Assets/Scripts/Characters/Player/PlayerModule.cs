@@ -3,10 +3,11 @@ using Characters.Interfaces;
 using Masters;
 using Photon.Pun;
 using UnityEngine;
+using Weapons.Interfaces;
 
 namespace Characters.Player
 {
-    public class PlayerModule : MonoBehaviourPun, ILiving
+    public class PlayerModule : MonoBehaviourPun, ILiving, IAbleToEquip
     {
         [Header("Initialization")]
         [SerializeField] private GameObject virtualCamera;
@@ -20,6 +21,13 @@ namespace Characters.Player
         [SerializeField] private float staminaRegenerationPerSecond = 2.5f;
         [SerializeField] private float maxStamina = 100f;
 
+        [Header("Equipping")]
+        [Tooltip("On local client weapon is attached to camera")]
+        [SerializeField] private Transform localHand;
+        [Tooltip("On online clients weapon should be attached to static point")]
+        [SerializeField] private Transform onlineHand;
+
+        public IWeapon EquippedWeapon { get; private set; }
         public float Health { get; private set; }
         public float HealthRegenerationPerSecond => healthRegenerationPerSecond;
         public bool IsAbleToTire => Stamina > 0;
@@ -152,6 +160,14 @@ namespace Characters.Player
             {
                 OnDeath?.Invoke();
             }
+        }
+        
+        public void EquipWeapon(IWeapon weapon)
+        {
+            EquippedWeapon = weapon;
+            EquippedWeapon.Owner = gameObject;
+
+            weapon.Instance.transform.SetParent(photonView.IsMine ? localHand : onlineHand, false);
         }
 
         public void HealthRegeneration()
