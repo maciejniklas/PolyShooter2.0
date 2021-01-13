@@ -26,6 +26,7 @@ namespace Characters.Player
         [SerializeField] private Transform localHand;
         [Tooltip("On online clients weapon should be attached to static point")]
         [SerializeField] private Transform onlineHand;
+        [SerializeField] private Transform remoteWeaponLookAtPoint;
 
         public IWeapon EquippedWeapon { get; private set; }
         public float Health { get; private set; }
@@ -166,6 +167,7 @@ namespace Characters.Player
         {
             EquippedWeapon = weapon;
             EquippedWeapon.Owner = gameObject;
+            EquippedWeapon.LookAtPointIfRemoteInstance = remoteWeaponLookAtPoint;
 
             weapon.Instance.transform.SetParent(photonView.IsMine ? localHand : onlineHand, false);
         }
