@@ -112,6 +112,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 2361829090332387267}
   visualRepresentation: {fileID: 0}
+  timeToBeSafeInSeconds: 5
+  healthRegenerationPerSecond: 1
+  maxHealth: 100
+  timeToRestInSeconds: 5
+  staminaRegenerationPerSecond: 2.5
+  maxStamina: 100
 --- !u!114 &3186686478778951211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   sprintSpeedValueBoost: 2
+  sprintStaminaCost: 10
   jumpForce: 4
   groundSensor: {fileID: 7670354725264846335}
   groundCheckDistance: 0.1
