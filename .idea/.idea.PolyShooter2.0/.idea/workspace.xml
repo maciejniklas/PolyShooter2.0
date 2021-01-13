@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cowboy Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cowboy Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Female Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Female Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Policeman Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Policeman Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/TownFemale Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TownFemale Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sandbox.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +52,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraControllModule.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraControlModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SceneType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SwitchToLobbyIfOffline.cs" />
@@ -57,6 +64,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySliderType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySlider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/KeepTryingUntilYouSucceed.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" />
     </changedPaths>
   </component>

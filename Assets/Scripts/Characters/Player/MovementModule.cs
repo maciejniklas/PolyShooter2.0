@@ -77,6 +77,8 @@ namespace Characters.Player
 
         private void FixedUpdate()
         {
+            if (!PlayerModule.LocalPlayer.IsAlive) return;
+            
             // Detect ground
             _isGrounded = Physics.CheckSphere(groundSensor.position, groundCheckDistance, groundLayer);
             

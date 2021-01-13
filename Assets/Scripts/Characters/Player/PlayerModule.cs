@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Characters.Interfaces;
+using Masters;
 using Photon.Pun;
 using UnityEngine;
 
@@ -40,6 +41,10 @@ namespace Characters.Player
 
         private IEnumerator _restTimerCoroutine;
         private IEnumerator _safeTimerCoroutine;
+        private Animator _animator;
+        private bool _isDying;
+        
+        private static readonly int DeathAnimationTrigger = Animator.StringToHash("Death");
 
         private void Awake()
         {
@@ -51,6 +56,8 @@ namespace Characters.Player
 
             _restTimerCoroutine = RestTimer();
             _safeTimerCoroutine = SafeTimer();
+            _animator = GetComponent<Animator>();
+            _isDying = false;
             
             if (!photonView.IsMine) return;
             
@@ -119,12 +126,32 @@ namespace Characters.Player
                 LocalPlayer = null;
             }
         }
-        
+
+        private void OnDisable()
+        {
+            OnDeath -= PhotonMaster.Instance.LeaveRoom;
+        }
+
+        private void OnEnable()
+        {
+            OnDeath += PhotonMaster.Instance.LeaveRoom;
+        }
+
         public void Death()
         {
             if (!photonView.IsMine) return;
-            
-            OnDeath?.Invoke();
+
+            // Release death trigger
+            if (!_isDying)
+            {
+                _animator.SetTrigger(DeathAnimationTrigger);
+                _isDying = true;
+            }
+            // Called during animation
+            else
+            {
+                OnDeath?.Invoke();
+            }
         }
 
         public void HealthRegeneration()
@@ -137,6 +164,7 @@ namespace Characters.Player
         public void Hurt(float damage)
         {
             if (!photonView.IsMine) return;
+            if (!IsAlive) return;
 
             // Update health value
             Health -= damage;
