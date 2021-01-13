@@ -636,6 +636,9 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Characters" t="Include">
+            <e p="Interfaces" t="Include">
+              <e p="ILiving.cs" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="CameraMouseControlModule.cs" t="Include" />
               <e p="MovementModule.cs" t="Include" />
@@ -648,9 +651,12 @@
           </e>
           <e p="Patterns" t="Include">
             <e p="BaseState.cs" t="Include" />
+            <e p="KeepTryingUntilYouSucceed.cs" t="Include" />
             <e p="StateMachine.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="LivingPropertySlider.cs" t="Include" />
+            <e p="LivingPropertySliderType.cs" t="Include" />
             <e p="LobbyPageState.cs" t="Include" />
             <e p="Notification.cs" t="Include" />
             <e p="PlayButtonInteractable.cs" t="Include" />

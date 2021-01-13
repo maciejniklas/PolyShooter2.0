@@ -12,6 +12,7 @@ namespace Characters.Player
         [Header("General")]
         [SerializeField] private float speed = 4;
         [SerializeField] private float sprintSpeedValueBoost = 2f;
+        [SerializeField] private float sprintStaminaCost = 5f;
         [SerializeField] private float jumpForce = 4;
 
         [Header("Ground detection")]
@@ -68,20 +69,21 @@ namespace Characters.Player
             {
                 speed -= sprintSpeedValueBoost;
             }
+            else if (Input.GetButton("Sprint"))
+            {
+                PlayerModule.LocalPlayer.Tire(sprintStaminaCost * Time.deltaTime);
+            }
         }
 
         private void FixedUpdate()
         {
+            if (!PlayerModule.LocalPlayer.IsAlive) return;
+            
             // Detect ground
             _isGrounded = Physics.CheckSphere(groundSensor.position, groundCheckDistance, groundLayer);
             
             // Move
             _rigidbody.MovePosition(transform.position + _movementDirection * (Time.deltaTime * speed));
-        }
-
-        private void UpdateGroundedInfo(bool isInside)
-        {
-            _isGrounded = isInside;
         }
     }
 }
