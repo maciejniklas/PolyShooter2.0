@@ -672,6 +672,7 @@
           <e p="Weapons" t="Include">
             <e p="Guns" t="Include">
               <e p="Firearm.cs" t="Include" />
+              <e p="MachineRifle.cs" t="Include" />
               <e p="Pistol.cs" t="Include" />
             </e>
             <e p="Interfaces" t="Include">
