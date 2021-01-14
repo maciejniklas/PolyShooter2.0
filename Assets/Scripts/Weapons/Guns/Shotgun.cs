@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Characters.Interfaces;
 using Photon.Pun;
 using UI;
@@ -30,7 +29,7 @@ namespace Weapons.Guns
         {
             if (photonView.IsMine)
             {
-                if (!_isAbleToShoot) return;
+                if (!IsAbleToShoot) return;
                 
                 if (BulletsInMagazine <= 0)
                 {
@@ -62,9 +61,10 @@ namespace Weapons.Guns
                 var direction = (worldDirectionPoint - shotStartPoint.position).normalized;
                 
                 if (!Physics.Raycast(shotStartPoint.position,
-                    direction.normalized, out hit, Range)) continue;
-                if (!hit.transform.CompareTag("Player")) continue;
-                var playerLiving = hit.transform.GetComponent<ILiving>();
+                    direction.normalized, out Hit, Range)) continue;
+                Debug.DrawLine(shotStartPoint.position, Hit.point, Color.yellow, 3);
+                if (!Hit.transform.CompareTag("Player")) continue;
+                var playerLiving = Hit.transform.GetComponent<ILiving>();
                 playerLiving.Hurt(Damage);
             }
         }
@@ -72,6 +72,8 @@ namespace Weapons.Guns
         // Draw shells dispersion
         private void OnDrawGizmosSelected()
         {
+            if (!Application.isPlaying) return;
+            
             Gizmos.color = Color.green;
 
             for (var index = 0; index < 20; index++)

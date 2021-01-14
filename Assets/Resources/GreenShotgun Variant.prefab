@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc9851a9e874d27b33a0d0b03b41ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotStartPoint: {fileID: 4570697940526671562}
   damage: 5
   bulletsPerMagazine: 6
   fireRate: 0.33333334
   initialMagazines: 2
   range: 10
+  shotStartPoint: {fileID: 4570697940526671562}
   shellsPerShot: 10
   shellsDispersion: 5
 --- !u!1001 &7567262972375294544

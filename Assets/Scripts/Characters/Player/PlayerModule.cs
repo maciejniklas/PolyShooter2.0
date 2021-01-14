@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using Characters.Interfaces;
+using Cinemachine;
 using Masters;
 using Photon.Pun;
 using UnityEngine;
+using Weapons.Guns;
 using Weapons.Interfaces;
 
 namespace Characters.Player
@@ -26,7 +28,7 @@ namespace Characters.Player
         [SerializeField] private Transform localHand;
         [Tooltip("On online clients weapon should be attached to static point")]
         [SerializeField] private Transform onlineHand;
-        [SerializeField] private Transform remoteWeaponLookAtPoint;
+        [SerializeField] private Transform shotSpot;
 
         public IWeapon EquippedWeapon { get; private set; }
         public float Health { get; private set; }
@@ -69,8 +71,12 @@ namespace Characters.Player
             _safeTimerCoroutine = SafeTimer();
             _animator = GetComponent<Animator>();
             _isDying = false;
-            
-            if (!photonView.IsMine) return;
+
+            if (!photonView.IsMine)
+            {
+                Destroy(virtualCamera.GetComponent<CinemachineVirtualCamera>());
+                return;
+            }
             
             // Singleton
             if (LocalPlayer != null)
@@ -89,7 +95,6 @@ namespace Characters.Player
             
             // Initialize FPP camera
             visualRepresentation.SetActive(false);
-            virtualCamera.SetActive(true);
                 
             // Initialize ILiving HUD
             OnHealthValueChanged?.Invoke(Health);
@@ -169,10 +174,12 @@ namespace Characters.Player
         {
             EquippedWeapon = weapon;
             EquippedWeapon.Owner = gameObject;
-            EquippedWeapon.LookAtPointIfRemoteInstance = remoteWeaponLookAtPoint;
-
+            
             EquippedWeapon.Instance.transform.SetParent(photonView.IsMine ? localHand : onlineHand, false);
 
+            var firearm = EquippedWeapon.Instance.GetComponent<Firearm>();
+            if (firearm != null) firearm.shotStartPoint = shotSpot;
+            
             if (!photonView.IsMine) return;
             
             OnWeaponEquipped?.Invoke(EquippedWeapon);

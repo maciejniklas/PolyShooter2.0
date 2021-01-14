@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Photon.Pun;
 using UI;
 using UnityEngine;
@@ -10,7 +9,6 @@ namespace Weapons.Guns
     public abstract class Firearm : MonoBehaviourPun, IWeapon, IShootable
     {
         [Header("General")]
-        [SerializeField] protected Transform shotStartPoint;
         [SerializeField] protected float damage = 10f;
         [SerializeField] protected int bulletsPerMagazine;
         [Tooltip("Describes how many shots are allowed per one second.")]
@@ -18,12 +16,14 @@ namespace Weapons.Guns
         [SerializeField] protected int initialMagazines;
         [SerializeField] protected float range;
 
+        [HideInInspector]
+        public Transform shotStartPoint;
+
         public int BulletsInMagazine { get; protected set; }
         public int BulletsPerMagazine => bulletsPerMagazine;
         public float Damage => damage;
         public float FireRate => fireRate;
         public GameObject Instance => gameObject;
-        public Transform LookAtPointIfRemoteInstance { get; set; }
         public int Magazines { get; private set; }
         public GameObject Owner { get; set; }
         public float Range => range;
@@ -32,22 +32,22 @@ namespace Weapons.Guns
         public event OnShotEventHandler OnShot;
         public event OnWeaponAttackEventHandler OnWeaponAttack;
 
-        protected bool _isAbleToShoot;
-        protected RaycastHit hit;
+        protected bool IsAbleToShoot;
+        protected RaycastHit Hit;
 
         protected virtual void Awake()
         {
             BulletsInMagazine = BulletsPerMagazine;
             Magazines = initialMagazines;
 
-            _isAbleToShoot = true;
+            IsAbleToShoot = true;
         }
 
         protected virtual void Update()
         {
             if (!photonView.IsMine)
             {
-                transform.LookAt(LookAtPointIfRemoteInstance);
+                transform.LookAt(shotStartPoint.position + shotStartPoint.forward * Range);
             }
             else
             {
@@ -62,11 +62,11 @@ namespace Weapons.Guns
 
         public IEnumerator FireRateCooldown()
         {
-            _isAbleToShoot = false;
+            IsAbleToShoot = false;
 
             yield return new WaitForSeconds(1 / FireRate);
 
-            _isAbleToShoot = true;
+            IsAbleToShoot = true;
         }
 
         public void Reload()

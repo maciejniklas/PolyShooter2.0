@@ -20,7 +20,7 @@ namespace Weapons.Guns
         {
             if (photonView.IsMine)
             {
-                if (!_isAbleToShoot) return;
+                if (!IsAbleToShoot) return;
                 
                 if (BulletsInMagazine <= 0)
                 {
@@ -38,9 +38,9 @@ namespace Weapons.Guns
                 base.Attack();
             }
 
-            if (!Physics.Raycast(shotStartPoint.position, shotStartPoint.forward, out hit, Range)) return;
-            if (!hit.transform.CompareTag("Player")) return;
-            var playerLiving = hit.transform.GetComponent<ILiving>();
+            if (!Physics.Raycast(shotStartPoint.position, shotStartPoint.forward, out Hit, Range)) return;
+            if (!Hit.transform.CompareTag("Player")) return;
+            var playerLiving = Hit.transform.GetComponent<ILiving>();
             playerLiving.Hurt(Damage);
         }
     }

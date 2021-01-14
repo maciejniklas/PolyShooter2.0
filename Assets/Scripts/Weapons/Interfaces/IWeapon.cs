@@ -9,7 +9,6 @@ namespace Weapons.Interfaces
     {
         float Damage { get; }
         GameObject Instance { get; }
-        Transform LookAtPointIfRemoteInstance { set; }
         GameObject Owner { get; set; }
 
         void Attack();

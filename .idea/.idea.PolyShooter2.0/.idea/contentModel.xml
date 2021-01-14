@@ -666,7 +666,6 @@
           </e>
           <e p="Utilities" t="Include">
             <e p="ReleaseCursorAfterButtonDown.cs" t="Include" />
-            <e p="RemoteWeaponLookAtPoint.cs" t="Include" />
             <e p="SceneType.cs" t="Include" />
             <e p="SwitchToLobbyIfOffline.cs" t="Include" />
           </e>
