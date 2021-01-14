@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using Characters.Interfaces;
+using Cinemachine;
 using Masters;
 using Photon.Pun;
 using UnityEngine;
+using Weapons.Guns;
+using Weapons.Interfaces;
 using UnityEngine.Rendering;
 
 namespace Characters.Player
 {
-    public class PlayerModule : MonoBehaviourPun, ILiving
+    public class PlayerModule : MonoBehaviourPun, ILiving, IAbleToEquip
     {
         [Header("Initialization")]
         [SerializeField] private GameObject virtualCamera;
@@ -21,6 +24,14 @@ namespace Characters.Player
         [SerializeField] private float staminaRegenerationPerSecond = 2.5f;
         [SerializeField] private float maxStamina = 100f;
 
+        [Header("Equipping")]
+        [Tooltip("On local client weapon is attached to camera")]
+        [SerializeField] private Transform localHand;
+        [Tooltip("On online clients weapon should be attached to static point")]
+        [SerializeField] private Transform onlineHand;
+        [SerializeField] private Transform shotSpot;
+
+        public IWeapon EquippedWeapon { get; private set; }
         public float Health { get; private set; }
         public float HealthRegenerationPerSecond => healthRegenerationPerSecond;
         public bool IsAbleToTire => Stamina > 0;
@@ -39,6 +50,8 @@ namespace Characters.Player
         public event OnDeathEventHandler OnDeath;
         public event OnHealthValueChangedEventHandler OnHealthValueChanged;
         public event OnStaminaValueChangedEventHandler OnStaminaValueChanged;
+
+        public event OnWeaponEquippedEventHandler OnWeaponEquipped;
 
         private IEnumerator _restTimerCoroutine;
         private IEnumerator _safeTimerCoroutine;
@@ -59,8 +72,12 @@ namespace Characters.Player
             _safeTimerCoroutine = SafeTimer();
             _animator = GetComponent<Animator>();
             _isDying = false;
-            
-            if (!photonView.IsMine) return;
+
+            if (!photonView.IsMine)
+            {
+                Destroy(virtualCamera.GetComponent<CinemachineVirtualCamera>());
+                return;
+            }
             
             // Singleton
             if (LocalPlayer != null)
@@ -80,9 +97,6 @@ namespace Characters.Player
             // Change model rendering to shadow only
             var modelRenderer = visualRepresentation.GetComponentInChildren<Renderer>();
             modelRenderer.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
-            
-            // Initialize FPP camera
-            virtualCamera.SetActive(true);
                 
             // Initialize ILiving HUD
             OnHealthValueChanged?.Invoke(Health);
@@ -156,6 +170,21 @@ namespace Characters.Player
             {
                 OnDeath?.Invoke();
             }
+        }
+        
+        public void EquipWeapon(IWeapon weapon)
+        {
+            EquippedWeapon = weapon;
+            EquippedWeapon.Owner = gameObject;
+            
+            EquippedWeapon.Instance.transform.SetParent(photonView.IsMine ? localHand : onlineHand, false);
+
+            var firearm = EquippedWeapon.Instance.GetComponent<Firearm>();
+            if (firearm != null) firearm.shotStartPoint = shotSpot;
+            
+            if (!photonView.IsMine) return;
+            
+            OnWeaponEquipped?.Invoke(EquippedWeapon);
         }
 
         public void HealthRegeneration()

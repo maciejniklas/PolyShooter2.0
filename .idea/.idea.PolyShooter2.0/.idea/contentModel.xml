@@ -637,6 +637,7 @@
         <e p="Scripts" t="Include">
           <e p="Characters" t="Include">
             <e p="Interfaces" t="Include">
+              <e p="IAbleToEquip.cs" t="Include" />
               <e p="ILiving.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
@@ -655,17 +656,31 @@
             <e p="StateMachine.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="Crosshair.cs" t="Include" />
             <e p="LivingPropertySlider.cs" t="Include" />
             <e p="LivingPropertySliderType.cs" t="Include" />
             <e p="LobbyPageState.cs" t="Include" />
             <e p="Notification.cs" t="Include" />
             <e p="PlayButtonInteractable.cs" t="Include" />
+            <e p="ShootingWeaponHud.cs" t="Include" />
             <e p="UsernameInputField.cs" t="Include" />
           </e>
           <e p="Utilities" t="Include">
             <e p="ReleaseCursorAfterButtonDown.cs" t="Include" />
             <e p="SceneType.cs" t="Include" />
             <e p="SwitchToLobbyIfOffline.cs" t="Include" />
+          </e>
+          <e p="Weapons" t="Include">
+            <e p="Guns" t="Include">
+              <e p="Firearm.cs" t="Include" />
+              <e p="MachineRifle.cs" t="Include" />
+              <e p="Pistol.cs" t="Include" />
+              <e p="Shotgun.cs" t="Include" />
+            </e>
+            <e p="Interfaces" t="Include">
+              <e p="IShootable.cs" t="Include" />
+              <e p="IWeapon.cs" t="Include" />
+            </e>
           </e>
         </e>
       </e>

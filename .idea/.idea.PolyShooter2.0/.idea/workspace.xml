@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Death.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Death.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Firearm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Firearm.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,23 +45,33 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayButtonInteractable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPoint.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraControllModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraControlModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SceneType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SwitchToLobbyIfOffline.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/ReleaseCursorAfterButtonDown.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraMouseControlModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/GroundSensor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/TriggerSensor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/MovementModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Interfaces/ILiving.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySliderType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySlider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/KeepTryingUntilYouSucceed.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/MovementModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/RemoteWeaponLookAtPoint.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Interfaces/IShootable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Interfaces/IAbleToEquip.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/ShootingWeaponHud.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/MachineRifle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Pistol.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraMouseControlModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Shotgun.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Interfaces/IWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Crosshair.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Firearm.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -130,6 +143,7 @@
       <workItem from="1610395546755" duration="4492000" />
       <workItem from="1610433280104" duration="11185000" />
       <workItem from="1610466049466" duration="15280000" />
+      <workItem from="1610608061372" duration="8446000" />
     </task>
     <servers />
   </component>

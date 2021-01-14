@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Photon.Pun;
+using UnityEngine;
 
 namespace Characters.Player
 {
@@ -6,7 +7,7 @@ namespace Characters.Player
     /// Responsible for camera movement at player local client
     /// </summary>
     [RequireComponent(typeof(Camera))]
-    public class CameraMouseControlModule : MonoBehaviour
+    public class CameraMouseControlModule : MonoBehaviourPun
     {
         [SerializeField] private float mouseSensitivity = 150f;
         [SerializeField] private float minimalXRotationAngle = -60;
@@ -18,6 +19,8 @@ namespace Characters.Player
 
         private void Awake()
         {
+            if (!photonView.IsMine) Destroy(this);
+            
             _xRotation = 0f;
         }
 

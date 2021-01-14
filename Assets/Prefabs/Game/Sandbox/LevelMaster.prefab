@@ -55,3 +55,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  startingWeaponsPool:
+  - {fileID: 5344369344082433257, guid: e00a348b5f0007045bf340b3051ff14b, type: 3}
+  - {fileID: 8687511607783858233, guid: 6ab3e2fd68291734f918dc30e925f7af, type: 3}
+  - {fileID: 7961768583573652181, guid: b80ebe77b0014964cb5fb9d3bf270981, type: 3}
