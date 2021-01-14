@@ -103,7 +103,7 @@ namespace Masters
             var randomStartingWeaponIndex = Random.Range(0, startingWeaponsPool.Count);
             var randomStartingWeaponPrefab = startingWeaponsPool[randomStartingWeaponIndex];
             var startingWeaponInstance =
-                PhotonNetwork.Instantiate(randomStartingWeaponPrefab.name, Vector3.zero, Quaternion.identity);
+                PhotonNetwork.Instantiate(randomStartingWeaponPrefab.name, randomStartingWeaponPrefab.transform.position, randomStartingWeaponPrefab.transform.rotation);
             
             // Equip starting weapon
             var startingWeapon = startingWeaponInstance.GetComponent<IWeapon>();
