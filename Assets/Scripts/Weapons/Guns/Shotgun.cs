@@ -43,6 +43,9 @@ namespace Weapons.Guns
                 photonView.RPC(nameof(Attack), RpcTarget.Others);
 
                 StartCoroutine(FireRateCooldown());
+                
+                // Notify listeners about shot
+                base.Attack();
             }
 
             for (var index = 0; index < shellsPerShot; index++)

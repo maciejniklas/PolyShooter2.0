@@ -33,6 +33,9 @@ namespace Weapons.Guns
                 photonView.RPC(nameof(Attack), RpcTarget.Others);
 
                 StartCoroutine(FireRateCooldown());
+                
+                // Notify listeners about shot
+                base.Attack();
             }
 
             if (!Physics.Raycast(shotStartPoint.position, shotStartPoint.forward, out hit, Range)) return;

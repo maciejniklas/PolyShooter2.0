@@ -55,7 +55,10 @@ namespace Weapons.Guns
             }
         }
 
-        public abstract void Attack();
+        public virtual void Attack()
+        {
+            OnShot?.Invoke(BulletsInMagazine);
+        }
 
         public IEnumerator FireRateCooldown()
         {
