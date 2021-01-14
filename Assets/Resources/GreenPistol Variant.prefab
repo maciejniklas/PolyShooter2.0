@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169ddc87b8bf47aab8b6f1b1a6bac973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotStartPoint: {fileID: 2991443622076630054}
   damage: 15
   bulletsPerMagazine: 16
   fireRate: 5
   initialMagazines: 2
   range: 20
+  shotStartPoint: {fileID: 0}
 --- !u!1001 &307385421911047373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -174,12 +174,6 @@ GameObject:
 --- !u!4 &8687511606727192309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 538659281095110217, guid: 4c112b7679cb8fc43a2a56e7ca66c093,
-    type: 3}
-  m_PrefabInstance: {fileID: 9217054260316504252}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2991443622076630054 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6226842331590870170, guid: 4c112b7679cb8fc43a2a56e7ca66c093,
     type: 3}
   m_PrefabInstance: {fileID: 9217054260316504252}
   m_PrefabAsset: {fileID: 0}
