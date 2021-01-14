@@ -48,6 +48,8 @@ namespace Characters.Player
         public event OnHealthValueChangedEventHandler OnHealthValueChanged;
         public event OnStaminaValueChangedEventHandler OnStaminaValueChanged;
 
+        public event OnWeaponEquippedEventHandler OnWeaponEquipped;
+
         private IEnumerator _restTimerCoroutine;
         private IEnumerator _safeTimerCoroutine;
         private Animator _animator;
@@ -169,7 +171,11 @@ namespace Characters.Player
             EquippedWeapon.Owner = gameObject;
             EquippedWeapon.LookAtPointIfRemoteInstance = remoteWeaponLookAtPoint;
 
-            weapon.Instance.transform.SetParent(photonView.IsMine ? localHand : onlineHand, false);
+            EquippedWeapon.Instance.transform.SetParent(photonView.IsMine ? localHand : onlineHand, false);
+
+            if (!photonView.IsMine) return;
+            
+            OnWeaponEquipped?.Invoke(EquippedWeapon);
         }
 
         public void HealthRegeneration()

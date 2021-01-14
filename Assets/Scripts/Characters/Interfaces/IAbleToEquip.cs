@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using Weapons.Interfaces;
+﻿using Weapons.Interfaces;
 
 namespace Characters.Interfaces
 {
@@ -11,5 +10,9 @@ namespace Characters.Interfaces
         IWeapon EquippedWeapon { get; }
         
         void EquipWeapon(IWeapon weapon);
+
+        event OnWeaponEquippedEventHandler OnWeaponEquipped;
     }
+
+    public delegate void OnWeaponEquippedEventHandler(IWeapon weapon);
 }

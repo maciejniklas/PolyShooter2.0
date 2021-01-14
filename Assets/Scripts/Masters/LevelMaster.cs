@@ -6,6 +6,7 @@ using Characters.Player;
 using ExitGames.Client.Photon;
 using Photon.Pun;
 using Photon.Realtime;
+using UI;
 using UnityEngine;
 using Weapons.Interfaces;
 using Random = UnityEngine.Random;
@@ -108,6 +109,7 @@ namespace Masters
             // Equip starting weapon
             var startingWeapon = startingWeaponInstance.GetComponent<IWeapon>();
             var playerEquipping = playerInstance.GetComponent<IAbleToEquip>();
+            playerEquipping.OnWeaponEquipped += ShootingWeaponHud.Instance.OnWeaponEquip;
             playerEquipping.EquipWeapon(startingWeapon);
 
             // Raise equip starting weapon event
