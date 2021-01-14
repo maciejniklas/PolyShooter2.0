@@ -656,6 +656,7 @@
             <e p="StateMachine.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="Crosshair.cs" t="Include" />
             <e p="LivingPropertySlider.cs" t="Include" />
             <e p="LivingPropertySliderType.cs" t="Include" />
             <e p="LobbyPageState.cs" t="Include" />

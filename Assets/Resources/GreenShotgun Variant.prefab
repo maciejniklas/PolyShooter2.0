@@ -17,7 +17,7 @@ MonoBehaviour:
   fireRate: 0.33333334
   initialMagazines: 2
   range: 10
-  shotStartPoint: {fileID: 4570697940526671562}
+  shotStartPoint: {fileID: 0}
   shellsPerShot: 10
   shellsDispersion: 5
 --- !u!1001 &7567262972375294544
@@ -118,12 +118,6 @@ GameObject:
 --- !u!4 &7961768582482840601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 538659281095110217, guid: 4c112b7679cb8fc43a2a56e7ca66c093,
-    type: 3}
-  m_PrefabInstance: {fileID: 7567262972375294544}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4570697940526671562 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6226842331590870170, guid: 4c112b7679cb8fc43a2a56e7ca66c093,
     type: 3}
   m_PrefabInstance: {fileID: 7567262972375294544}
   m_PrefabAsset: {fileID: 0}

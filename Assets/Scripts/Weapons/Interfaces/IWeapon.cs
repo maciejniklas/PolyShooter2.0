@@ -16,5 +16,5 @@ namespace Weapons.Interfaces
         event OnWeaponAttackEventHandler OnWeaponAttack;
     }
 
-    public delegate void OnWeaponAttackEventHandler();
+    public delegate void OnWeaponAttackEventHandler(IWeapon weapon);
 }

@@ -58,6 +58,7 @@ namespace Weapons.Guns
         public virtual void Attack()
         {
             OnShot?.Invoke(BulletsInMagazine);
+            OnWeaponAttack?.Invoke(this);
         }
 
         public IEnumerator FireRateCooldown()
