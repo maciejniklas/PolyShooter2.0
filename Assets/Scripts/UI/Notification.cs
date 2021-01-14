@@ -18,6 +18,7 @@ namespace UI
 
         private bool _isVisible;
         private bool _isRunning;
+        private IEnumerator _currentCoroutine;
 
         private void Awake()
         {
@@ -78,10 +79,11 @@ namespace UI
             if (_isRunning)
             {
                 _isRunning = false;
-                StopCoroutine(DisplayAtScreen());
+                if (_currentCoroutine != null) StopCoroutine(_currentCoroutine);
             }
 
-            StartCoroutine(DisplayAtScreen());
+            _currentCoroutine = DisplayAtScreen();
+            StartCoroutine(_currentCoroutine);
 
             notificationText.color = color;
             notificationText.text = message;
