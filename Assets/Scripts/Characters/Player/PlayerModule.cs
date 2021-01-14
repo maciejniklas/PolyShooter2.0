@@ -3,6 +3,7 @@ using Characters.Interfaces;
 using Masters;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace Characters.Player
 {
@@ -76,8 +77,11 @@ namespace Characters.Player
         {
             if (!photonView.IsMine) return;
             
+            // Change model rendering to shadow only
+            var modelRenderer = visualRepresentation.GetComponentInChildren<Renderer>();
+            modelRenderer.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
+            
             // Initialize FPP camera
-            visualRepresentation.SetActive(false);
             virtualCamera.SetActive(true);
                 
             // Initialize ILiving HUD
