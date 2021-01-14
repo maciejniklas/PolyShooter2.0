@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Characters.Player;
 using Photon.Pun;
 using UI;
 using UnityEngine;
@@ -35,12 +36,18 @@ namespace Weapons.Guns
         protected bool IsAbleToShoot;
         protected RaycastHit Hit;
 
+        private bool _isReloading;
+        
+        private static readonly int ReloadAnimationTrigger = Animator.StringToHash("Reload");
+
         protected virtual void Awake()
         {
             BulletsInMagazine = BulletsPerMagazine;
             Magazines = initialMagazines;
 
             IsAbleToShoot = true;
+
+            _isReloading = false;
         }
 
         protected virtual void Update()
@@ -51,7 +58,7 @@ namespace Weapons.Guns
             }
             else
             {
-                if (Input.GetButtonDown("Reload")) Reload();
+                if (Input.GetButtonDown("Reload")) photonView.RPC(nameof(Reload), RpcTarget.All);
             }
         }
 
@@ -70,20 +77,37 @@ namespace Weapons.Guns
             IsAbleToShoot = true;
         }
 
+        [PunRPC]
         public void Reload()
         {
-            if (!photonView.IsMine) return;
-
-            if (Magazines <= 0)
+            while (true)
             {
-                Notification.Instance.ErrorMessage("No more magazines!");
-                return;
-            }
-
-            Magazines -= 1;
-            BulletsInMagazine = BulletsPerMagazine;
+                if (Magazines <= 0)
+                {
+                    if (photonView.IsMine) Notification.Instance.ErrorMessage("No more magazines!");
+                    return;
+                }
             
-            OnReload?.Invoke(BulletsInMagazine, Magazines);
+                // Raise animation trigger
+                if (!_isReloading)
+                {
+                    _isReloading = true;
+                    Owner.GetComponent<Animator>().SetTrigger(ReloadAnimationTrigger);
+                    continue;
+                }
+
+                _isReloading = false;
+                
+                // Called during animation
+                if (photonView.IsMine)
+                {
+                    Magazines -= 1;
+                    BulletsInMagazine = BulletsPerMagazine;
+                    OnReload?.Invoke(BulletsInMagazine, Magazines);
+                }
+            
+                break;
+            }
         }
 
         private void OnDrawGizmos()
