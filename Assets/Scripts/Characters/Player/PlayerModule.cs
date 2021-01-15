@@ -50,7 +50,6 @@ namespace Characters.Player
         public event OnDeathEventHandler OnDeath;
         public event OnHealthValueChangedEventHandler OnHealthValueChanged;
         public event OnStaminaValueChangedEventHandler OnStaminaValueChanged;
-
         public event OnWeaponEquippedEventHandler OnWeaponEquipped;
 
         private IEnumerator _restTimerCoroutine;
@@ -63,15 +62,8 @@ namespace Characters.Player
         private void Awake()
         {
             // Parameters initialization
-            Health = MaxHealth;
-            Stamina = MaxStamina;
-            IsAfterActivity = false;
-            IsTarget = false;
-
-            _restTimerCoroutine = RestTimer();
-            _safeTimerCoroutine = SafeTimer();
+            Initialize();
             _animator = GetComponent<Animator>();
-            _isDying = false;
 
             if (!photonView.IsMine)
             {
@@ -97,10 +89,6 @@ namespace Characters.Player
             // Change model rendering to shadow only
             var modelRenderer = visualRepresentation.GetComponentInChildren<Renderer>();
             modelRenderer.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
-                
-            // Initialize ILiving HUD
-            OnHealthValueChanged?.Invoke(Health);
-            OnStaminaValueChanged?.Invoke(Stamina);
         }
 
         private void Update()
@@ -143,16 +131,6 @@ namespace Characters.Player
             {
                 LocalPlayer = null;
             }
-        }
-
-        private void OnDisable()
-        {
-            OnDeath -= PhotonMaster.Instance.LeaveRoom;
-        }
-
-        private void OnEnable()
-        {
-            OnDeath += PhotonMaster.Instance.LeaveRoom;
         }
 
         public void Death()
@@ -222,6 +200,21 @@ namespace Characters.Player
                 IsTarget = true;
             }
             StartCoroutine(_safeTimerCoroutine);
+        }
+
+        public void Initialize()
+        {
+            Health = MaxHealth;
+            Stamina = MaxStamina;
+            IsAfterActivity = false;
+            IsTarget = false;
+
+            _restTimerCoroutine = RestTimer();
+            _safeTimerCoroutine = SafeTimer();
+            _isDying = false;
+            
+            OnHealthValueChanged?.Invoke(Health);
+            OnStaminaValueChanged?.Invoke(Stamina);
         }
 
         public IEnumerator RestTimer()

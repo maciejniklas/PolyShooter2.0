@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Characters.Interfaces;
@@ -15,11 +16,14 @@ namespace Masters
 {
     public class LevelMaster : MonoBehaviour, IOnEventCallback
     {
+        [SerializeField] private bool isSandbox = false;
         [Tooltip("Used for right receiving all buffered events, RPC, etc.")]
         [SerializeField] private float spawnWaitTimeInSeconds = 1f;
         [SerializeField] private List<GameObject> playerPrefabsPool;
         [SerializeField] private List<Transform> spawnPointsPool;
         [SerializeField] private List<GameObject> startingWeaponsPool;
+
+        private Transform _spawnPoint;
 
         private const byte SynchronizeSpawnPointsEventCode = 1;
         private const byte EquipStartingWeaponOnOtherInstancesEventCode = 2;
@@ -84,22 +88,8 @@ namespace Masters
             }
         }
 
-        private IEnumerator SpawnPlayer()
+        private void EquipWeaponOnSpawn(GameObject playerInstance)
         {
-            // Give short time to receive all buffered events, RPC, etc.
-            yield return new WaitForSeconds(spawnWaitTimeInSeconds);
-
-            // Get spawn point
-            var randomSpawnPointIndex = Random.Range(0, spawnPointsPool.Count);
-            var spawnPoint = spawnPointsPool[randomSpawnPointIndex];
-            RaiseSynchronizeSpawnPointsEvent(spawnPoint.name);
-
-            // Get player prefab
-            var randomPlayerPrefabIndex = Random.Range(0, playerPrefabsPool.Count);
-            var randomPlayerPrefab = playerPrefabsPool[randomPlayerPrefabIndex];
-            var playerInstance =
-                PhotonNetwork.Instantiate(randomPlayerPrefab.name, spawnPoint.position, spawnPoint.rotation);
-            
             // Get starting weapon
             var randomStartingWeaponIndex = Random.Range(0, startingWeaponsPool.Count);
             var randomStartingWeaponPrefab = startingWeaponsPool[randomStartingWeaponIndex];
@@ -109,13 +99,51 @@ namespace Masters
             // Equip starting weapon
             var startingWeapon = startingWeaponInstance.GetComponent<IWeapon>();
             var playerEquipping = playerInstance.GetComponent<IAbleToEquip>();
-            playerEquipping.OnWeaponEquipped += ShootingWeaponHud.Instance.OnWeaponEquip;
+
+            if (playerEquipping.EquippedWeapon != null)
+            {
+                PhotonNetwork.Destroy(playerEquipping.EquippedWeapon.Instance);
+            }
+            else
+            {
+                playerEquipping.OnWeaponEquipped += ShootingWeaponHud.Instance.OnWeaponEquip;
+            }
+            
             playerEquipping.EquipWeapon(startingWeapon);
 
             // Raise equip starting weapon event
             var playerViewId = playerInstance.GetPhotonView().ViewID;
             var weaponViewId = startingWeapon.Instance.GetPhotonView().ViewID;
             RaiseEquipStartingWeaponEvent(playerViewId, weaponViewId);
+        }
+
+        private void Respawn()
+        {
+            PlayerModule.LocalPlayer.transform.rotation = _spawnPoint.rotation;
+            PlayerModule.LocalPlayer.transform.position = _spawnPoint.position;
+            PlayerModule.LocalPlayer.Initialize();
+            EquipWeaponOnSpawn(PlayerModule.LocalPlayer.gameObject);
+        }
+
+        private IEnumerator SpawnPlayer()
+        {
+            // Give short time to receive all buffered events, RPC, etc.
+            yield return new WaitForSeconds(spawnWaitTimeInSeconds);
+
+            // Get spawn point
+            var randomSpawnPointIndex = Random.Range(0, spawnPointsPool.Count);
+            _spawnPoint = spawnPointsPool[randomSpawnPointIndex];
+            RaiseSynchronizeSpawnPointsEvent(_spawnPoint.name);
+
+            // Get player prefab
+            var randomPlayerPrefabIndex = Random.Range(0, playerPrefabsPool.Count);
+            var randomPlayerPrefab = playerPrefabsPool[randomPlayerPrefabIndex];
+            var playerInstance =
+                PhotonNetwork.Instantiate(randomPlayerPrefab.name, _spawnPoint.position, _spawnPoint.rotation);
+
+            if (isSandbox) playerInstance.GetComponent<PlayerModule>().OnDeath += Respawn;
+
+            EquipWeaponOnSpawn(playerInstance);
         }
 
         private static void RaiseEquipStartingWeaponEvent(int playerViewId, int weaponViewId)
