@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using Characters.Player;
+using Masters;
 using UnityEngine;
 using UnityEngine.UI;
 using Weapons.Interfaces;
@@ -21,6 +22,12 @@ namespace UI
         private IEnumerator AddListenerCoroutine()
         {
             yield return new WaitUntil(() => PlayerModule.LocalPlayer != null);
+            yield return new WaitUntil(() => LevelMaster.Instance != null);
+
+            if (!LevelMaster.Instance.IsSandbox)
+            {
+                PlayerModule.LocalPlayer.OnDeath += () => Destroy(gameObject);
+            }
 
             PlayerModule.LocalPlayer.EquippedWeapon.OnWeaponAttack += (weapon) =>
             {

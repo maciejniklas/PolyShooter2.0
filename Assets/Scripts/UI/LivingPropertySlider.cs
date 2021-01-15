@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Collections;
 using Characters.Player;
-using Patterns;
+using Masters;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,12 +13,10 @@ namespace UI
         [SerializeField] private LivingPropertySliderType type;
         
         private Slider _slider;
-        private KeepTryingUntilYouSucceed _keepTryingUntilYouSucceed;
 
         private void Awake()
         {
             _slider = GetComponent<Slider>();
-            _keepTryingUntilYouSucceed = new KeepTryingUntilYouSucceed(0.5f, AddListener);
         }
 
         private void OnDisable()
@@ -43,11 +42,19 @@ namespace UI
 
         private void OnEnable()
         {
-            StartCoroutine(_keepTryingUntilYouSucceed.Try());
+            StartCoroutine(AddListener());
         }
 
-        private void AddListener()
+        private IEnumerator AddListener()
         {
+            yield return new WaitUntil(() => PlayerModule.LocalPlayer != null);
+            yield return new WaitUntil(() => LevelMaster.Instance != null);
+
+            if (!LevelMaster.Instance.IsSandbox)
+            {
+                PlayerModule.LocalPlayer.OnDeath += () => Destroy(gameObject);
+            }
+            
             switch (type)
             {
                 case LivingPropertySliderType.Health:

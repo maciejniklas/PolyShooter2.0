@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSandbox: 0
+  spectator: {fileID: 8655352421780534059, guid: e6672b5e01594ea448c9598e02213719,
+    type: 3}
   spawnWaitTimeInSeconds: 1
   playerPrefabsPool:
   - {fileID: 4145653015368666242, guid: be0baf5b3765f984fb5128e4152844e3, type: 3}

@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using Characters.Player;
+using Masters;
+using UnityEngine;
 using UnityEngine.UI;
 using Weapons.Interfaces;
 
@@ -22,6 +26,11 @@ namespace UI
             {
                 Instance = this;
             }
+        }
+
+        private void OnEnable()
+        {
+            StartCoroutine(AddDestroyListener());
         }
 
         private void OnDestroy()
@@ -49,6 +58,17 @@ namespace UI
 
                 shootableWeapon.OnReload += OnReload;
                 shootableWeapon.OnShot += OnShot;
+            }
+        }
+
+        private IEnumerator AddDestroyListener()
+        {
+            yield return new WaitUntil(() => PlayerModule.LocalPlayer != null);
+            yield return new WaitUntil(() => LevelMaster.Instance != null);
+
+            if (!LevelMaster.Instance.IsSandbox)
+            {
+                PlayerModule.LocalPlayer.OnDeath += () => Destroy(gameObject);
             }
         }
 
