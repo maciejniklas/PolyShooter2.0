@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Post-process Volume.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Post-process Volume.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Round.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Round.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/GreenMachineRifle Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/GreenMachineRifle Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Policeman Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Policeman Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sandbox.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySliderType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySlider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/KeepTryingUntilYouSucceed.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/MovementModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/RemoteWeaponLookAtPoint.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Interfaces/IShootable.cs" />
@@ -74,6 +74,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Firearm.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -146,7 +147,7 @@
       <workItem from="1610433280104" duration="11185000" />
       <workItem from="1610466049466" duration="15280000" />
       <workItem from="1610608061372" duration="8446000" />
-      <workItem from="1610722588571" duration="2223000" />
+      <workItem from="1610722588571" duration="3932000" />
     </task>
     <servers />
   </component>

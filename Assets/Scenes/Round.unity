@@ -1456,6 +1456,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment
       objectReference: {fileID: 0}
+    - target: {fileID: 5761572330700906745, guid: 6ea2dbff4623ead40a6e733b0aaff71f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ea2dbff4623ead40a6e733b0aaff71f, type: 3}
 --- !u!1001 &8081039983708778081
@@ -1528,7 +1533,7 @@ PrefabInstance:
     - target: {fileID: 8081039984255661999, guid: bc255a5893d60e84cb0fdef00a4570a0,
         type: 3}
       propertyPath: isSandbox
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8081039984255661999, guid: bc255a5893d60e84cb0fdef00a4570a0,
         type: 3}
