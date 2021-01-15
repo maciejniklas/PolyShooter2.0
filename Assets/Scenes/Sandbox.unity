@@ -1506,6 +1506,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8081039984255661999, guid: bc255a5893d60e84cb0fdef00a4570a0,
         type: 3}
+      propertyPath: isSandbox
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081039984255661999, guid: bc255a5893d60e84cb0fdef00a4570a0,
+        type: 3}
       propertyPath: spawnPointsPool.Array.data[0]
       value: 
       objectReference: {fileID: 1615274174}
