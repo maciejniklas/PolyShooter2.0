@@ -17,20 +17,45 @@ namespace Masters
     public class LevelMaster : MonoBehaviour, IOnEventCallback
     {
         [SerializeField] private bool isSandbox = false;
+        [SerializeField] private GameObject spectator;
         [Tooltip("Used for right receiving all buffered events, RPC, etc.")]
         [SerializeField] private float spawnWaitTimeInSeconds = 1f;
         [SerializeField] private List<GameObject> playerPrefabsPool;
         [SerializeField] private List<Transform> spawnPointsPool;
         [SerializeField] private List<GameObject> startingWeaponsPool;
 
+        public bool IsSandbox => isSandbox;
+        
+        public static LevelMaster Instance { get; private set; }
+
         private Transform _spawnPoint;
 
         private const byte SynchronizeSpawnPointsEventCode = 1;
         private const byte EquipStartingWeaponOnOtherInstancesEventCode = 2;
 
+        private void Awake()
+        {
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                Instance = this;
+            }
+        }
+
         private void Start()
         {
             StartCoroutine(SpawnPlayer());
+        }
+
+        private void OnDestroy()
+        {
+            if (Instance == this)
+            {
+                Instance = null;
+            }
         }
 
         private void OnDisable()
@@ -117,6 +142,12 @@ namespace Masters
             RaiseEquipStartingWeaponEvent(playerViewId, weaponViewId);
         }
 
+        private void OnPlayerDeathInRound()
+        {
+            Instantiate(spectator, Vector3.up, Quaternion.identity);
+            PhotonNetwork.Destroy(PlayerModule.LocalPlayer.gameObject);
+        }
+
         private void Respawn()
         {
             PlayerModule.LocalPlayer.transform.rotation = _spawnPoint.rotation;
@@ -141,7 +172,14 @@ namespace Masters
             var playerInstance =
                 PhotonNetwork.Instantiate(randomPlayerPrefab.name, _spawnPoint.position, _spawnPoint.rotation);
 
-            if (isSandbox) playerInstance.GetComponent<PlayerModule>().OnDeath += Respawn;
+            if (isSandbox)
+            {
+                playerInstance.GetComponent<PlayerModule>().OnDeath += Respawn;
+            }
+            else
+            {
+                playerInstance.GetComponent<PlayerModule>().OnDeath += OnPlayerDeathInRound;
+            }
 
             EquipWeaponOnSpawn(playerInstance);
         }

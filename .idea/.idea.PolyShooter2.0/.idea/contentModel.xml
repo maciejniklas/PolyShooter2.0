@@ -645,6 +645,7 @@
               <e p="MovementModule.cs" t="Include" />
               <e p="PlayerModule.cs" t="Include" />
             </e>
+            <e p="SpectatorModule.cs" t="Include" />
           </e>
           <e p="Masters" t="Include">
             <e p="LevelMaster.cs" t="Include" />
@@ -652,7 +653,6 @@
           </e>
           <e p="Patterns" t="Include">
             <e p="BaseState.cs" t="Include" />
-            <e p="KeepTryingUntilYouSucceed.cs" t="Include" />
             <e p="StateMachine.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
@@ -663,6 +663,7 @@
             <e p="Notification.cs" t="Include" />
             <e p="PlayButtonInteractable.cs" t="Include" />
             <e p="ShootingWeaponHud.cs" t="Include" />
+            <e p="SpectatorHeader.cs" t="Include" />
             <e p="UsernameInputField.cs" t="Include" />
           </e>
           <e p="Utilities" t="Include">
