@@ -53,7 +53,7 @@ namespace Masters
 
         private void Start()
         {
-            SpawnPlayer();
+            StartCoroutine(SpawnPlayer());
         }
 
         private void OnDestroy()
@@ -146,8 +146,10 @@ namespace Masters
             RaiseEquipStartingWeaponEvent(playerViewId, weaponViewId);
         }
 
-        private void SpawnPlayer()
+        private IEnumerator SpawnPlayer()
         {
+            yield return new WaitForSeconds(0.5f);
+            
             // Get spawn point
             var randomSpawnPointIndex = Random.Range(0, spawnPointsPool.Count);
             LocalPlayerSpawnPoint = spawnPointsPool[randomSpawnPointIndex];
