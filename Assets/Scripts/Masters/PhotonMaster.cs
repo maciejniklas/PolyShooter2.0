@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using ExitGames.Client.Photon;
 using Photon.Pun;
@@ -77,7 +78,7 @@ namespace Masters
 
         public override void OnConnectedToMaster()
         {
-            Notification.Instance.InfoMessage("Successfully connected to master server.");
+            Notification.InfoMessage("Successfully connected to master server.");
 
             if (!_isConnecting) return;
             PhotonNetwork.JoinRandomRoom();
@@ -88,11 +89,11 @@ namespace Masters
         {
             var messageText = $"Disconnected from server. Caused by: {cause.ToString()}";
 
-            if (Notification.Instance != null)
+            try
             {
-                Notification.Instance.ErrorMessage(messageText);
+                Notification.ErrorMessage(messageText);
             }
-            else
+            catch
             {
                 Debug.LogWarning(messageText);
             }
@@ -100,7 +101,7 @@ namespace Masters
 
         public override void OnJoinedRoom()
         {
-            Notification.Instance.InfoMessage("Successfully joined room.");
+            Notification.InfoMessage("Successfully joined room.");
             
             PhotonNetwork.LoadLevel((int) SceneType.Sandbox);
 
@@ -110,7 +111,7 @@ namespace Masters
 
         public override void OnJoinRandomFailed(short returnCode, string message)
         {
-            Notification.Instance.ErrorMessage($"Failed joining random room. Message: {message}");
+            Notification.ErrorMessage($"Failed joining random room. Message: {message}");
 
             PhotonNetwork.CreateRoom(null, new RoomOptions{MaxPlayers = maxNumberOfPlayersPerRoom});
         }
@@ -119,11 +120,11 @@ namespace Masters
         {
             const string messageText = "Successfully left room.";
 
-            if (Notification.Instance != null)
+            try
             {
-                Notification.Instance.ErrorMessage(messageText);
+                Notification.ErrorMessage(messageText);
             }
-            else
+            catch
             {
                 Debug.LogWarning(messageText);
             }
@@ -136,7 +137,7 @@ namespace Masters
 
         public override void OnPlayerEnteredRoom(Player newPlayer)
         {
-            Notification.Instance.InfoMessage($"{newPlayer.NickName} entered room.");
+            Notification.InfoMessage($"{newPlayer.NickName} entered room.");
 
             if (PhotonNetwork.CurrentRoom.PlayerCount != maxNumberOfPlayersPerRoom) return;
             RaiseStartGameCountdownEvent();
@@ -144,7 +145,7 @@ namespace Masters
 
         public override void OnPlayerLeftRoom(Player otherPlayer)
         {
-            Notification.Instance.InfoMessage($"{otherPlayer.NickName} left room.");
+            Notification.InfoMessage($"{otherPlayer.NickName} left room.");
         }
         
         // Methods
@@ -175,13 +176,13 @@ namespace Masters
 
         private IEnumerator StartRoundCountdown()
         {
-            Notification.Instance.InfoMessage("All players are in.");
+            Notification.InfoMessage("All players are in.");
 
             for (var index = secondsToGameStart; index >= 0; index--)
             {
                 yield return new WaitForSeconds(1);
                 
-                Notification.Instance.InfoMessage($"Round starts in {index} seconds.");
+                Notification.InfoMessage($"Round starts in {index} seconds.");
             }
 
             if (PhotonNetwork.IsMasterClient)

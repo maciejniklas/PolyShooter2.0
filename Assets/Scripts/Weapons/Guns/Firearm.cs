@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using Characters.Player;
 using Photon.Pun;
 using UI;
 using UnityEngine;
@@ -84,7 +83,7 @@ namespace Weapons.Guns
             {
                 if (Magazines <= 0)
                 {
-                    if (photonView.IsMine) Notification.Instance.ErrorMessage("No more magazines!");
+                    if (photonView.IsMine) Notification.ErrorMessage("No more magazines!");
                     return;
                 }
             

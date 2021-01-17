@@ -3,95 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Gun Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Gun Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Main Camera.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Main Camera.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Post-process Volume.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Post-process Volume.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/ReleaseCursorAfterButtonDown.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/ReleaseCursorAfterButtonDown.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Round.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Round/Environment.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Round/Environment.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Round/LevelMaster.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Round/LevelMaster.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Round/Lights.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Round/Lights.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Round/Spectator.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Round/Spectator.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Sandbox.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Sandbox/Environment.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Sandbox/Environment.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Sandbox/LevelMaster.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Sandbox/LevelMaster.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Sandbox/Lights.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Sandbox/Lights.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/SwitchToLobbyIfOffline.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/SwitchToLobbyIfOffline.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/Crosshair.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/Crosshair.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/LeaveRoomButton Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/LeaveRoomButton Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/LivingFeaturesHUD.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/LivingFeaturesHUD.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/LivingPlayersCounter.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/LivingPlayersCounter.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/LivingPropertySlider Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/LivingPropertySlider Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/MatchTimer.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/MatchTimer.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/ShootingWeaponHUD.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/ShootingWeaponHUD.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/SpectatorHeader.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/UI/SpectatorHeader.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Weapon.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Weapon.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/WinScreen.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/WinScreen.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/CameraLobby.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/CameraLobby.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/ConnectingPageState Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/ConnectingPageState Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/LobbyPageState.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/LobbyPageState.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/LobbyStateMachine.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/LobbyStateMachine.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/LoginPageState Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/LoginPageState Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/Logo.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/Logo.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/UI/LoadingIndicator Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/UI/LoadingIndicator Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/UI/PlayButton Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/UI/PlayButton Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/UI/UsernameInputField Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lobby/UI/UsernameInputField Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Masters.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Masters.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Button.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Button.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Button_x.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Button_x.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/CanvasDefault.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/CanvasDefault.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/InputField.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/InputField.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Notification Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Notification Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Slider.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Slider.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Text.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Text.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/SceneType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/SceneType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Firearm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Firearm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/MachineRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/MachineRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Pistol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Pistol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Shotgun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Shotgun.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,11 +42,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/BaseState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/SingleSceneSingleton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Singleton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SwitchToLobbyIfOffline.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayButtonInteractable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPoint.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraControllModule.cs" />
@@ -145,11 +61,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/RemoteWeaponLookAtPoint.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Interfaces/IShootable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Interfaces/IAbleToEquip.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/MachineRifle.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Pistol.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Shotgun.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Interfaces/IWeapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Firearm.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Spectator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraMouseControlModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" />
@@ -165,7 +77,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/MatchTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/WinScreen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersCounter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Firearm.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/MachineRifle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Pistol.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Shotgun.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -241,7 +159,7 @@
       <workItem from="1610722588571" duration="8427000" />
       <workItem from="1610822558224" duration="603000" />
       <workItem from="1610869039428" duration="9014000" />
-      <workItem from="1610892840595" duration="2626000" />
+      <workItem from="1610892840595" duration="3733000" />
     </task>
     <servers />
   </component>

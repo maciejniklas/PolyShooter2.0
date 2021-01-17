@@ -58,7 +58,7 @@ namespace UI
             if (string.IsNullOrWhiteSpace(username))
             {
                 OnUsernameValidation?.Invoke(false);
-                Notification.Instance.ErrorMessage("Enter valid username!");
+                Notification.ErrorMessage("Enter valid username!");
                 return;
             }
 
