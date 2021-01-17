@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Characters.Player;
 using ExitGames.Client.Photon;
 using Photon.Pun;
@@ -13,11 +14,38 @@ namespace UI
         [SerializeField] private Text livingPlayersText;
         [SerializeField] private GameObject winScreen;
         
+        public int LivingPlayers
+        {
+            get { return int.Parse(livingPlayersText.text); }
+        }
+        
+        public static LivingPlayersCounter Instance { get; private set; }
+        
         private const byte DecreaseLivingPlayersEventCode = 4;
+
+        private void Awake()
+        {
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                Instance = this;
+            }
+        }
 
         private void Start()
         {
             if(PhotonNetwork.IsConnected) livingPlayersText.text = PhotonNetwork.CurrentRoom.PlayerCount.ToString();
+        }
+
+        private void OnDestroy()
+        {
+            if (Instance == this)
+            {
+                Instance = null;
+            }
         }
 
         private void OnDisable()

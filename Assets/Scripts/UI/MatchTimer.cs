@@ -1,44 +1,62 @@
 ﻿using System.Collections;
+using ExitGames.Client.Photon;
 using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI
 {
-    public class MatchTimer : MonoBehaviour
+    public class MatchTimer : MonoBehaviour, IOnEventCallback
     {
         [SerializeField] private int timeToEndOfMatchInSeconds;
         [SerializeField] private Text timeText;
-
-        public event OnMatchEndEventHandler OnMatchEnd;
+        [SerializeField] private Text timesUpText;
         
-        public delegate void OnMatchEndEventHandler();
-        
-        public static MatchTimer Instance { get; private set; }
-
-        private void Awake()
-        {
-            if (Instance != null)
-            {
-                Destroy(gameObject);
-            }
-            else
-            {
-                Instance = this;
-            }
-        }
+        private const byte TimesUpEventCode = 5;
 
         private void Start()
         {
             StartCoroutine(TimerCoroutine());
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
-            if (Instance == this)
+            PhotonNetwork.RemoveCallbackTarget(this);
+        }
+
+        private void OnEnable()
+        {
+            PhotonNetwork.AddCallbackTarget(this);
+        }
+
+        public void OnEvent(EventData photonEvent)
+        {
+            if (photonEvent.Code != TimesUpEventCode) return;
+
+            timesUpText.gameObject.SetActive(true);
+            Time.timeScale = 0;
+        }
+
+        public void RestoreTimeScale()
+        {
+            Time.timeScale = 1;
+        }
+
+        private void RaiseTimesUpEvent()
+        {
+            var raiseEventOptions = new RaiseEventOptions
             {
-                Instance = null;
-            }
+                Receivers = ReceiverGroup.All,
+                CachingOption = EventCaching.AddToRoomCache
+            };
+            
+            var sendOptions = new SendOptions
+            {
+                Reliability = true
+            };
+
+            PhotonNetwork.RaiseEvent(TimesUpEventCode, null, raiseEventOptions, sendOptions);
         }
 
         private IEnumerator TimerCoroutine()
@@ -47,11 +65,16 @@ namespace UI
             {
                 timeText.text = seconds.ToString();
                 yield return new WaitForSeconds(1);
+
+                if (LivingPlayersCounter.Instance.LivingPlayers == 1)
+                {
+                    break;
+                }
             }
 
-            if (PhotonNetwork.IsMasterClient)
+            if (PhotonNetwork.IsMasterClient && LivingPlayersCounter.Instance.LivingPlayers != 1)
             {
-                OnMatchEnd?.Invoke();
+                RaiseTimesUpEvent();
             }
         }
     }
