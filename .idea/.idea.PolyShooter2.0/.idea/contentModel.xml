@@ -657,9 +657,11 @@
           </e>
           <e p="UI" t="Include">
             <e p="Crosshair.cs" t="Include" />
+            <e p="LivingPlayersCounter.cs" t="Include" />
             <e p="LivingPropertySlider.cs" t="Include" />
             <e p="LivingPropertySliderType.cs" t="Include" />
             <e p="LobbyPageState.cs" t="Include" />
+            <e p="MatchTimer.cs" t="Include" />
             <e p="Notification.cs" t="Include" />
             <e p="PlayButtonInteractable.cs" t="Include" />
             <e p="ShootingWeaponHud.cs" t="Include" />
@@ -670,6 +672,7 @@
             <e p="ReleaseCursorAfterButtonDown.cs" t="Include" />
             <e p="SceneType.cs" t="Include" />
             <e p="SwitchToLobbyIfOffline.cs" t="Include" />
+            <e p="WinScreen.cs" t="Include" />
           </e>
           <e p="Weapons" t="Include">
             <e p="Guns" t="Include">

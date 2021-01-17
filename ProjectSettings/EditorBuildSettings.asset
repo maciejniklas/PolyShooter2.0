@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby.unity
     guid: daf6671190c333f4ab9424606864e180
   - enabled: 1
-    path: Assets/Scenes/Round.unity
-    guid: 5c3dcb3c18d5d3b4fa88186ca8a27ce6
-  - enabled: 1
     path: Assets/Scenes/Sandbox.unity
     guid: e785ef7bf954ba44b989070aa226bcc9
+  - enabled: 1
+    path: Assets/Scenes/Round.unity
+    guid: 5c3dcb3c18d5d3b4fa88186ca8a27ce6
   m_configObjects: {}
