@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using ExitGames.Client.Photon;
 using Photon.Pun;
 using Photon.Realtime;
@@ -9,28 +9,33 @@ using Utilities;
 
 namespace Masters
 {
+    /// <summary>
+    /// Responsible for connection with server and all Photon callbacks
+    /// </summary>
     public class PhotonMaster : MonoBehaviourPunCallbacks, IOnEventCallback
     {
-        [SerializeField] private byte maxNumberOfPlayersPerRoom = 5;
-        [Tooltip("Time of waiting when the desired number of players is in room")]
-        [SerializeField] private int secondsToRoundStart = 5;
+        // Class specific
         
-        public static PhotonMaster Instance { get; private set; }
+        [SerializeField] private byte maxNumberOfPlayersPerRoom = 5;
+        [SerializeField] private int secondsToGameStart = 5;
 
+        private static PhotonMaster _instance;
         private static bool _isConnecting;
         
-        private const byte StartRoundCountdownEventCode = 3;
+        private const byte StartGameCountdownEventCode = 3;
+        
+        // Unity messages
 
         private void Awake()
         {
-            // Singleton
-            if (Instance != null)
+            // Singleton global
+            if (_instance != null)
             {
                 Destroy(gameObject);
             }
             else
             {
-                Instance = this;
+                _instance = this;
                 DontDestroyOnLoad(gameObject);
             }
             
@@ -48,10 +53,10 @@ namespace Masters
 
         private void Update()
         {
+            // Feature only for testing purpose
             if (!Debug.isDebugBuild && !Application.isEditor) return;
             if (!Input.GetKeyDown(KeyCode.Minus)) return;
-            if (PhotonNetwork.IsMasterClient) PhotonNetwork.CurrentRoom.IsOpen = false;
-            RaiseStartRoundCountdownEvent();
+            RaiseStartGameCountdownEvent();
         }
 
         public override void OnDisable()
@@ -67,6 +72,8 @@ namespace Masters
             
             PhotonNetwork.AddCallbackTarget(this);
         }
+        
+        // Photon callbacks
 
         public override void OnConnectedToMaster()
         {
@@ -132,21 +139,21 @@ namespace Masters
             Notification.Instance.InfoMessage($"{newPlayer.NickName} entered room.");
 
             if (PhotonNetwork.CurrentRoom.PlayerCount != maxNumberOfPlayersPerRoom) return;
-            if (PhotonNetwork.IsMasterClient) PhotonNetwork.CurrentRoom.IsOpen = false;
-            RaiseStartRoundCountdownEvent();
+            RaiseStartGameCountdownEvent();
         }
 
         public override void OnPlayerLeftRoom(Player otherPlayer)
         {
             Notification.Instance.InfoMessage($"{otherPlayer.NickName} left room.");
         }
+        
+        // Methods
 
         public void OnEvent(EventData photonEvent)
         {
-            if (photonEvent.Code == StartRoundCountdownEventCode)
-            {
-                StartCoroutine(StartRoundCountdown());
-            }
+            if (photonEvent.Code != StartGameCountdownEventCode) return;
+            if (PhotonNetwork.IsMasterClient) PhotonNetwork.CurrentRoom.IsOpen = false;
+            StartCoroutine(StartRoundCountdown());
         }
 
         public void ConnectAndJoin()
@@ -170,7 +177,7 @@ namespace Masters
         {
             Notification.Instance.InfoMessage("All players are in.");
 
-            for (var index = secondsToRoundStart; index > 0; index--)
+            for (var index = secondsToGameStart; index >= 0; index--)
             {
                 yield return new WaitForSeconds(1);
                 
@@ -179,11 +186,11 @@ namespace Masters
 
             if (PhotonNetwork.IsMasterClient)
             {
-                PhotonNetwork.LoadLevel((int) SceneType.Round);
+                PhotonNetwork.LoadLevel((int) SceneType.Game);
             }
         }
 
-        private static void RaiseStartRoundCountdownEvent()
+        private static void RaiseStartGameCountdownEvent()
         {
             var raiseEventOptions = new RaiseEventOptions
             {
@@ -196,7 +203,7 @@ namespace Masters
                 Reliability = true
             };
 
-            PhotonNetwork.RaiseEvent(StartRoundCountdownEventCode, null, raiseEventOptions, sendOptions);
+            PhotonNetwork.RaiseEvent(StartGameCountdownEventCode, null, raiseEventOptions, sendOptions);
         }
     }
 }
