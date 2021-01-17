@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using ExitGames.Client.Photon;
 using Photon.Pun;
@@ -7,6 +6,7 @@ using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utilities;
+using Utilities.Cursor;
 
 namespace Masters
 {
@@ -105,8 +105,7 @@ namespace Masters
             
             PhotonNetwork.LoadLevel((int) SceneType.Sandbox);
 
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            CursorStateMachine.ChangeState(CursorStateFactory.Locked);
         }
 
         public override void OnJoinRandomFailed(short returnCode, string message)
@@ -131,8 +130,7 @@ namespace Masters
 
             SceneManager.LoadScene((int) SceneType.Lobby);
 
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            CursorStateMachine.ChangeState(CursorStateFactory.Accessible);
         }
 
         public override void OnPlayerEnteredRoom(Player newPlayer)

@@ -653,6 +653,8 @@
           </e>
           <e p="Patterns" t="Include">
             <e p="Implementations" t="Include">
+              <e p="State.cs" t="Include" />
+              <e p="StateMachine.cs" t="Include" />
               <e p="StateMachineMonoBehaviour.cs" t="Include" />
               <e p="StateMonoBehaviour.cs" t="Include" />
             </e>
@@ -675,6 +677,12 @@
             <e p="UsernameInputField.cs" t="Include" />
           </e>
           <e p="Utilities" t="Include">
+            <e p="Cursor" t="Include">
+              <e p="CursorAccessibleState.cs" t="Include" />
+              <e p="CursorLockState.cs" t="Include" />
+              <e p="CursorStateFactory.cs" t="Include" />
+              <e p="CursorStateMachine.cs" t="Include" />
+            </e>
             <e p="ReleaseCursorAfterButtonDown.cs" t="Include" />
             <e p="SceneType.cs" t="Include" />
             <e p="SwitchToLobbyIfOffline.cs" t="Include" />
