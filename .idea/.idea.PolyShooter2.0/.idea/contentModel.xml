@@ -652,15 +652,21 @@
             <e p="PhotonMaster.cs" t="Include" />
           </e>
           <e p="Patterns" t="Include">
-            <e p="BaseState.cs" t="Include" />
-            <e p="StateMachine.cs" t="Include" />
+            <e p="Implementations" t="Include">
+              <e p="StateMachineMonoBehaviour.cs" t="Include" />
+              <e p="StateMonoBehaviour.cs" t="Include" />
+            </e>
+            <e p="Interfaces" t="Include">
+              <e p="IState.cs" t="Include" />
+              <e p="IStateMachine.cs" t="Include" />
+            </e>
           </e>
           <e p="UI" t="Include">
             <e p="Crosshair.cs" t="Include" />
             <e p="LivingPlayersCounter.cs" t="Include" />
             <e p="LivingPropertySlider.cs" t="Include" />
             <e p="LivingPropertySliderType.cs" t="Include" />
-            <e p="LobbyPageState.cs" t="Include" />
+            <e p="LobbyPageStateMonoBehaviour.cs" t="Include" />
             <e p="MatchTimer.cs" t="Include" />
             <e p="Notification.cs" t="Include" />
             <e p="PlayButtonInteractable.cs" t="Include" />
