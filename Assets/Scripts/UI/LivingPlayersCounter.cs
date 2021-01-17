@@ -6,13 +6,14 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.UI;
+using Utilities;
 
 namespace UI
 {
     public class LivingPlayersCounter : MonoBehaviour, IOnEventCallback
     {
         [SerializeField] private Text livingPlayersText;
-        [SerializeField] private GameObject winScreen;
+        [SerializeField] private GameObject winScreenPrefab;
         
         public int LivingPlayers
         {
@@ -22,6 +23,7 @@ namespace UI
         public static LivingPlayersCounter Instance { get; private set; }
         
         private const byte DecreaseLivingPlayersEventCode = 4;
+        private const byte WinnerEventCode = 6;
 
         private void Awake()
         {
@@ -62,15 +64,38 @@ namespace UI
 
         public void OnEvent(EventData photonEvent)
         {
-            if (photonEvent.Code != DecreaseLivingPlayersEventCode) return;
+            // Receive event data
+            var receivedData = photonEvent.CustomData as object[];
 
-            var livingPlayers = int.Parse(livingPlayersText.text);
-            livingPlayers -= 1;
-            livingPlayersText.text = livingPlayers.ToString();
-
-            if (livingPlayers == 1)
+            // Check what event was raised
+            switch (photonEvent.Code)
             {
-                LastPlayerWins();
+                case DecreaseLivingPlayersEventCode:
+                {
+                    var livingPlayers = int.Parse(livingPlayersText.text);
+                    livingPlayers -= 1;
+                    livingPlayersText.text = livingPlayers.ToString();
+
+                    if (livingPlayers == 1 && PlayerModule.LocalPlayer != null)
+                    {
+                        RaiseWinnerEvent();
+                    }
+                    
+                    break;
+                }
+                
+                case WinnerEventCode:
+                {
+                    // Obtain player
+                    var playerViewId = (int) receivedData[0];
+                    var playerView = PhotonView.Find(playerViewId);
+                    
+                    // Obtain weapon
+                    var winScreen = Instantiate(winScreenPrefab, Vector3.zero, Quaternion.identity).GetComponent<WinScreen>();
+                    winScreen.Initialize(playerView.transform);
+                    
+                    break;
+                }
             }
         }
 
@@ -97,9 +122,27 @@ namespace UI
             PhotonNetwork.RaiseEvent(DecreaseLivingPlayersEventCode, null, raiseEventOptions, sendOptions);
         }
 
-        private void LastPlayerWins()
+        private void RaiseWinnerEvent()
         {
-            Instantiate(winScreen, Vector3.zero, Quaternion.identity);
+            // Form data to send
+            var dataToSend = new object[]
+            {
+                PlayerModule.LocalPlayer.photonView.ViewID,
+            };
+            
+            var raiseEventOptions = new RaiseEventOptions
+            {
+                Receivers = ReceiverGroup.All,
+                CachingOption = EventCaching.AddToRoomCache
+            };
+            
+            var sendOptions = new SendOptions
+            {
+                Reliability = true
+            };
+
+            PhotonNetwork.RaiseEvent(WinnerEventCode, dataToSend, raiseEventOptions, sendOptions);
+            
             PlayerModule.LocalPlayer.Winner();
         }
     }

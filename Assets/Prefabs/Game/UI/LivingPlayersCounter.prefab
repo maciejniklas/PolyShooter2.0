@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   livingPlayersText: {fileID: 1823280092960754059}
-  winScreen: {fileID: 1080647930088280790, guid: 27c7f249ce36e244f8fdac88cdbbdcde,
+  winScreenPrefab: {fileID: 1080647930088280790, guid: 27c7f249ce36e244f8fdac88cdbbdcde,
     type: 3}
 --- !u!1 &1084110078304983345
 GameObject:

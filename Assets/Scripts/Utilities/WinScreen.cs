@@ -8,10 +8,10 @@ namespace Utilities
     {
         [SerializeField] private CinemachineVirtualCamera virtualCamera;
 
-        private void Start()
+        public void Initialize(Transform winnerTransform)
         {
-            virtualCamera.Follow = PlayerModule.LocalPlayer.transform;
-            virtualCamera.LookAt = PlayerModule.LocalPlayer.transform;
+            virtualCamera.Follow = winnerTransform;
+            virtualCamera.LookAt = winnerTransform;
         }
     }
 }

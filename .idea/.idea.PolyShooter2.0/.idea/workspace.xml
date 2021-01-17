@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Round.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Round.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MatchTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MatchTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/WinScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/WinScreen.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,11 +74,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/SpectatorModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/RoundTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/RotateAroundLocalPlayer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/WinScreen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersCounter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/MatchTimer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/WinScreen.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersCounter.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -154,7 +153,7 @@
       <workItem from="1610608061372" duration="8446000" />
       <workItem from="1610722588571" duration="8427000" />
       <workItem from="1610822558224" duration="603000" />
-      <workItem from="1610869039428" duration="7736000" />
+      <workItem from="1610869039428" duration="9014000" />
     </task>
     <servers />
   </component>
