@@ -263,5 +263,14 @@ namespace Characters.Player
             }
             StartCoroutine(_restTimerCoroutine);
         }
+
+        public void Winner()
+        {
+            Destroy(virtualCamera.GetComponent<CameraMouseControlModule>());
+            Destroy(GetComponent<MovementModule>());
+            EquippedWeapon.Instance.transform.SetParent(onlineHand, false);
+            var modelRenderer = visualRepresentation.GetComponentInChildren<Renderer>();
+            modelRenderer.shadowCastingMode = ShadowCastingMode.On;
+        }
     }
 }

@@ -8,9 +8,10 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class LivingPlayersTimer : MonoBehaviour, IOnEventCallback
+    public class LivingPlayersCounter : MonoBehaviour, IOnEventCallback
     {
         [SerializeField] private Text livingPlayersText;
+        [SerializeField] private GameObject winScreen;
         
         private const byte DecreaseLivingPlayersEventCode = 4;
 
@@ -38,6 +39,11 @@ namespace UI
             var livingPlayers = int.Parse(livingPlayersText.text);
             livingPlayers -= 1;
             livingPlayersText.text = livingPlayers.ToString();
+
+            if (livingPlayers == 1)
+            {
+                LastPlayerWins();
+            }
         }
 
         private IEnumerator AddPlayerDeathListener()
@@ -61,6 +67,12 @@ namespace UI
             };
 
             PhotonNetwork.RaiseEvent(DecreaseLivingPlayersEventCode, null, raiseEventOptions, sendOptions);
+        }
+
+        private void LastPlayerWins()
+        {
+            Instantiate(winScreen, Vector3.zero, Quaternion.identity);
+            PlayerModule.LocalPlayer.Winner();
         }
     }
 }
