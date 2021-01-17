@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayButtonInteractable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayButtonInteractable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/CameraLobby.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lobby/CameraLobby.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/CameraLobby.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lobby/CameraLobby.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/Logo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Logo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/Logo.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Logo.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/LoadingIndicator Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LoadingIndicator Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/LoadingIndicator Variant.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LoadingIndicator Variant.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/PlayButton Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PlayButton Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/PlayButton Variant.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PlayButton Variant.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/UsernameInputField Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UsernameInputField Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/UsernameInputField Variant.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UsernameInputField Variant.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +71,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/MachineRifle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Pistol.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Shotgun.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/StateMachine.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/IStateMachine.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Interfaces/IBaseState.cs" />
@@ -77,6 +89,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/ReleaseCursorAfterButtonDown.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayButtonInteractable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -152,7 +165,7 @@
       <workItem from="1610722588571" duration="8427000" />
       <workItem from="1610822558224" duration="603000" />
       <workItem from="1610869039428" duration="9014000" />
-      <workItem from="1610892840595" duration="9550000" />
+      <workItem from="1610892840595" duration="9886000" />
     </task>
     <servers />
   </component>
