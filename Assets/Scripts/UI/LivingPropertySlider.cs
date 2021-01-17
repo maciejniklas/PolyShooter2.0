@@ -48,9 +48,8 @@ namespace UI
         private IEnumerator AddListener()
         {
             yield return new WaitUntil(() => PlayerModule.LocalPlayer != null);
-            yield return new WaitUntil(() => LevelMaster.Instance != null);
 
-            if (!LevelMaster.Instance.IsSandbox)
+            if (!LevelMaster.IsSandbox)
             {
                 PlayerModule.LocalPlayer.OnDeath += () => Destroy(gameObject);
             }

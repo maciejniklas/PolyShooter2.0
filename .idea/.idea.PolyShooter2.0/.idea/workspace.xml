@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/CameraLobby.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lobby/CameraLobby.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/CameraLobby.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lobby/CameraLobby.prefab.meta" afterDir="false" />
@@ -16,6 +17,15 @@
       <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/UsernameInputField Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UsernameInputField Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/UsernameInputField Variant.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UsernameInputField Variant.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Masters/GameLevelMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Masters/GameLevelMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Masters/SandboxLevelMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Masters/SandboxLevelMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Crosshair.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Crosshair.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySlider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ShootingWeaponHud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ShootingWeaponHud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SpectatorHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SpectatorHeader.cs" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +49,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SceneType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SwitchToLobbyIfOffline.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/GroundSensor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/TriggerSensor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Interfaces/ILiving.cs" />
@@ -53,16 +61,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Interfaces/IWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Spectator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraMouseControlModule.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySlider.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/ShootingWeaponHud.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Crosshair.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/SpectatorHeader.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/SpectatorModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/RoundTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/RotateAroundLocalPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersTimer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/MatchTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/WinScreen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersCounter.cs" />
@@ -90,6 +92,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayButtonInteractable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/GameLevelMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/SandboxLevelMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Crosshair.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySlider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/ShootingWeaponHud.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/SpectatorHeader.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -165,7 +175,7 @@
       <workItem from="1610722588571" duration="8427000" />
       <workItem from="1610822558224" duration="603000" />
       <workItem from="1610869039428" duration="9014000" />
-      <workItem from="1610892840595" duration="9886000" />
+      <workItem from="1610892840595" duration="14513000" />
     </task>
     <servers />
   </component>
