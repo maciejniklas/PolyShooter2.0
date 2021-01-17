@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Round.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Round.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/bullet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/bullet.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/icons8-rifle-magazine-96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/icons8-rifle-magazine-96.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-    </list>
+    <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,6 +71,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/SpectatorModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/RoundTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/MatchTimer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersTimer.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -154,7 +146,7 @@
       <workItem from="1610608061372" duration="8446000" />
       <workItem from="1610722588571" duration="8427000" />
       <workItem from="1610822558224" duration="603000" />
-      <workItem from="1610869039428" duration="2039000" />
+      <workItem from="1610869039428" duration="2641000" />
     </task>
     <servers />
   </component>
