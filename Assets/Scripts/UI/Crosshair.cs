@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Characters.Player;
 using Masters;
 using UnityEngine;
@@ -22,12 +21,13 @@ namespace UI
         private IEnumerator AddListenerCoroutine()
         {
             yield return new WaitUntil(() => PlayerModule.LocalPlayer != null);
-            yield return new WaitUntil(() => LevelMaster.Instance != null);
 
-            if (!LevelMaster.Instance.IsSandbox)
+            if (!LevelMaster.IsSandbox)
             {
                 PlayerModule.LocalPlayer.OnDeath += () => Destroy(gameObject);
             }
+            
+            yield return new WaitUntil(() => PlayerModule.LocalPlayer.EquippedWeapon != null);
 
             PlayerModule.LocalPlayer.EquippedWeapon.OnWeaponAttack += (weapon) =>
             {

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Utilities.Cursor;
 
 namespace Utilities
 {
@@ -11,13 +12,11 @@ namespace Utilities
         {
             if (Input.GetButtonDown("ReleaseCursor"))
             {
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
+                CursorStateMachine.ChangeState(CursorStateFactory.Accessible);
             }
             else if (Input.GetButtonUp("ReleaseCursor"))
             {
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
+                CursorStateMachine.ChangeState(CursorStateFactory.Locked);
             }
         }
     }

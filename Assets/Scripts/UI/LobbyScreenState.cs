@@ -1,9 +1,8 @@
-﻿using Patterns;
-using UnityEngine;
+﻿using Patterns.Implementations;
 
 namespace UI
 {
-    public class LobbyPageState : BaseState
+    public class LobbyScreenState : StateMonoBehaviour
     {
         public override void PrepareState()
         {

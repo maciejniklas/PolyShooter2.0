@@ -24,7 +24,7 @@ namespace Weapons.Guns
                 
                 if (BulletsInMagazine <= 0)
                 {
-                    Notification.Instance.ErrorMessage("No more bullets!");
+                    Notification.ErrorMessage("No more bullets!");
                     return;
                 }
 

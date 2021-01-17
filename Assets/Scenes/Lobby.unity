@@ -239,7 +239,7 @@ PrefabInstance:
     - target: {fileID: 1877032674069295108, guid: 5c755f85ba72d664c9af3afdbf78b2c5,
         type: 3}
       propertyPath: m_Name
-      value: LobbyStateMachine
+      value: LobbyScreenStateMachine
       objectReference: {fileID: 0}
     - target: {fileID: 1877032674069295162, guid: 5c755f85ba72d664c9af3afdbf78b2c5,
         type: 3}
@@ -674,9 +674,19 @@ PrefabInstance:
       objectReference: {fileID: 142360032}
     - target: {fileID: 2761950938525671989, guid: 2ca84d3667cb80b47bdebbe830224a4e,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangeState
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761950938525671989, guid: 2ca84d3667cb80b47bdebbe830224a4e,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1839192592}
+    - target: {fileID: 2761950938525671989, guid: 2ca84d3667cb80b47bdebbe830224a4e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Patterns.Implementations.StateMonoBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7719745718554537819, guid: 2ca84d3667cb80b47bdebbe830224a4e,
         type: 3}
       propertyPath: m_Name

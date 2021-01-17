@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI
@@ -13,12 +14,23 @@ namespace UI
 
         private void Awake()
         {
-            // Reference
             _button = GetComponent<Button>();
         }
 
-        private void Start()
+        private void OnDisable()
         {
+            UsernameInputField.Instance.OnUsernameValidation -= ButtonInteractable;
+        }
+
+        private void OnEnable()
+        {
+            StartCoroutine(AddButtonInteractableListener());
+        }
+
+        private IEnumerator AddButtonInteractableListener()
+        {
+            yield return new WaitUntil(() => UsernameInputField.Instance != null);
+
             UsernameInputField.Instance.OnUsernameValidation += ButtonInteractable;
         }
 

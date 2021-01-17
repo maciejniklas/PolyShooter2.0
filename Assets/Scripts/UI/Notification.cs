@@ -9,27 +9,26 @@ namespace UI
     /// </summary>
     public class Notification : MonoBehaviour
     {
-        [SerializeField] private float visibleTimeInSeconds = 5f;
+        [SerializeField] private float timeVisibleInSeconds = 5f;
         [SerializeField] private Text notificationText;
-        [SerializeField] private Color informationColor = Color.white;
-        [SerializeField] private Color errorColor = Color.red;
-        
-        public static Notification Instance { get; private set; }
+        public Color informationColor = Color.white;
+        public Color errorColor = Color.red;
 
         private bool _isVisible;
         private bool _isRunning;
-        private IEnumerator _currentCoroutine;
+        private IEnumerator _currentMessageCoroutine;
+        private static Notification _instance;
 
         private void Awake()
         {
-            // Singleton
-            if (Instance != null)
+            // Singleton global
+            if (_instance != null)
             {
                 Destroy(gameObject);
             }
             else
             {
-                Instance = this;
+                _instance = this;
                 DontDestroyOnLoad(gameObject);
             }
             
@@ -43,14 +42,14 @@ namespace UI
             Hide();
         }
 
-        public void InfoMessage(string message)
+        public static void InfoMessage(string message)
         {
-            Message(message, informationColor);
+            _instance.Message(message, _instance.informationColor);
         }
 
-        public void ErrorMessage(string message)
+        public static void ErrorMessage(string message)
         {
-            Message(message, errorColor);
+            _instance.Message(message, _instance.errorColor);
         }
 
         private IEnumerator DisplayAtScreen()
@@ -62,7 +61,7 @@ namespace UI
                 Show();
             }
 
-            yield return new WaitForSeconds(visibleTimeInSeconds);
+            yield return new WaitForSeconds(timeVisibleInSeconds);
 
             _isRunning = false;
             Hide();
@@ -79,11 +78,11 @@ namespace UI
             if (_isRunning)
             {
                 _isRunning = false;
-                if (_currentCoroutine != null) StopCoroutine(_currentCoroutine);
+                if (_currentMessageCoroutine != null) StopCoroutine(_currentMessageCoroutine);
             }
 
-            _currentCoroutine = DisplayAtScreen();
-            StartCoroutine(_currentCoroutine);
+            _currentMessageCoroutine = DisplayAtScreen();
+            StartCoroutine(_currentMessageCoroutine);
 
             notificationText.color = color;
             notificationText.text = message;

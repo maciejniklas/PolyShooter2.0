@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using ExitGames.Client.Photon;
 using Photon.Pun;
 using Photon.Realtime;
@@ -6,31 +6,37 @@ using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utilities;
+using Utilities.Cursor;
 
 namespace Masters
 {
+    /// <summary>
+    /// Responsible for connection with server and all Photon callbacks
+    /// </summary>
     public class PhotonMaster : MonoBehaviourPunCallbacks, IOnEventCallback
     {
-        [SerializeField] private byte maxNumberOfPlayersPerRoom = 5;
-        [Tooltip("Time of waiting when the desired number of players is in room")]
-        [SerializeField] private int secondsToRoundStart = 5;
+        // Class specific
         
-        public static PhotonMaster Instance { get; private set; }
+        [SerializeField] private byte maxNumberOfPlayersPerRoom = 5;
+        [SerializeField] private int secondsToGameStart = 5;
 
+        private static PhotonMaster _instance;
         private static bool _isConnecting;
         
-        private const byte StartRoundCountdownEventCode = 3;
+        private const byte StartGameCountdownEventCode = 3;
+        
+        // Unity messages
 
         private void Awake()
         {
-            // Singleton
-            if (Instance != null)
+            // Singleton global
+            if (_instance != null)
             {
                 Destroy(gameObject);
             }
             else
             {
-                Instance = this;
+                _instance = this;
                 DontDestroyOnLoad(gameObject);
             }
             
@@ -48,10 +54,10 @@ namespace Masters
 
         private void Update()
         {
+            // Feature only for testing purpose
             if (!Debug.isDebugBuild && !Application.isEditor) return;
             if (!Input.GetKeyDown(KeyCode.Minus)) return;
-            if (PhotonNetwork.IsMasterClient) PhotonNetwork.CurrentRoom.IsOpen = false;
-            RaiseStartRoundCountdownEvent();
+            RaiseStartGameCountdownEvent();
         }
 
         public override void OnDisable()
@@ -67,10 +73,12 @@ namespace Masters
             
             PhotonNetwork.AddCallbackTarget(this);
         }
+        
+        // Photon callbacks
 
         public override void OnConnectedToMaster()
         {
-            Notification.Instance.InfoMessage("Successfully connected to master server.");
+            Notification.InfoMessage("Successfully connected to master server.");
 
             if (!_isConnecting) return;
             PhotonNetwork.JoinRandomRoom();
@@ -81,11 +89,11 @@ namespace Masters
         {
             var messageText = $"Disconnected from server. Caused by: {cause.ToString()}";
 
-            if (Notification.Instance != null)
+            try
             {
-                Notification.Instance.ErrorMessage(messageText);
+                Notification.ErrorMessage(messageText);
             }
-            else
+            catch
             {
                 Debug.LogWarning(messageText);
             }
@@ -93,17 +101,16 @@ namespace Masters
 
         public override void OnJoinedRoom()
         {
-            Notification.Instance.InfoMessage("Successfully joined room.");
+            Notification.InfoMessage("Successfully joined room.");
             
             PhotonNetwork.LoadLevel((int) SceneType.Sandbox);
 
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            CursorStateMachine.ChangeState(CursorStateFactory.Locked);
         }
 
         public override void OnJoinRandomFailed(short returnCode, string message)
         {
-            Notification.Instance.ErrorMessage($"Failed joining random room. Message: {message}");
+            Notification.ErrorMessage($"Failed joining random room. Message: {message}");
 
             PhotonNetwork.CreateRoom(null, new RoomOptions{MaxPlayers = maxNumberOfPlayersPerRoom});
         }
@@ -112,41 +119,40 @@ namespace Masters
         {
             const string messageText = "Successfully left room.";
 
-            if (Notification.Instance != null)
+            try
             {
-                Notification.Instance.ErrorMessage(messageText);
+                Notification.ErrorMessage(messageText);
             }
-            else
+            catch
             {
                 Debug.LogWarning(messageText);
             }
 
             SceneManager.LoadScene((int) SceneType.Lobby);
 
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            CursorStateMachine.ChangeState(CursorStateFactory.Accessible);
         }
 
         public override void OnPlayerEnteredRoom(Player newPlayer)
         {
-            Notification.Instance.InfoMessage($"{newPlayer.NickName} entered room.");
+            Notification.InfoMessage($"{newPlayer.NickName} entered room.");
 
             if (PhotonNetwork.CurrentRoom.PlayerCount != maxNumberOfPlayersPerRoom) return;
-            if (PhotonNetwork.IsMasterClient) PhotonNetwork.CurrentRoom.IsOpen = false;
-            RaiseStartRoundCountdownEvent();
+            RaiseStartGameCountdownEvent();
         }
 
         public override void OnPlayerLeftRoom(Player otherPlayer)
         {
-            Notification.Instance.InfoMessage($"{otherPlayer.NickName} left room.");
+            Notification.InfoMessage($"{otherPlayer.NickName} left room.");
         }
+        
+        // Methods
 
         public void OnEvent(EventData photonEvent)
         {
-            if (photonEvent.Code == StartRoundCountdownEventCode)
-            {
-                StartCoroutine(StartRoundCountdown());
-            }
+            if (photonEvent.Code != StartGameCountdownEventCode) return;
+            if (PhotonNetwork.IsMasterClient) PhotonNetwork.CurrentRoom.IsOpen = false;
+            StartCoroutine(StartRoundCountdown());
         }
 
         public void ConnectAndJoin()
@@ -168,22 +174,22 @@ namespace Masters
 
         private IEnumerator StartRoundCountdown()
         {
-            Notification.Instance.InfoMessage("All players are in.");
+            Notification.InfoMessage("All players are in.");
 
-            for (var index = secondsToRoundStart; index > 0; index--)
+            for (var index = secondsToGameStart; index >= 0; index--)
             {
                 yield return new WaitForSeconds(1);
                 
-                Notification.Instance.InfoMessage($"Round starts in {index} seconds.");
+                Notification.InfoMessage($"Round starts in {index} seconds.");
             }
 
             if (PhotonNetwork.IsMasterClient)
             {
-                PhotonNetwork.LoadLevel((int) SceneType.Round);
+                PhotonNetwork.LoadLevel((int) SceneType.Game);
             }
         }
 
-        private static void RaiseStartRoundCountdownEvent()
+        private static void RaiseStartGameCountdownEvent()
         {
             var raiseEventOptions = new RaiseEventOptions
             {
@@ -196,7 +202,7 @@ namespace Masters
                 Reliability = true
             };
 
-            PhotonNetwork.RaiseEvent(StartRoundCountdownEventCode, null, raiseEventOptions, sendOptions);
+            PhotonNetwork.RaiseEvent(StartGameCountdownEventCode, null, raiseEventOptions, sendOptions);
         }
     }
 }

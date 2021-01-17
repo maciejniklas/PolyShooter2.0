@@ -62,7 +62,7 @@ namespace Characters.Player
         private void Awake()
         {
             // Parameters initialization
-            Initialize();
+            RespawnInitialization();
             _animator = GetComponent<Animator>();
 
             if (!photonView.IsMine)
@@ -202,7 +202,7 @@ namespace Characters.Player
             StartCoroutine(_safeTimerCoroutine);
         }
 
-        public void Initialize()
+        public void RespawnInitialization()
         {
             Health = MaxHealth;
             Stamina = MaxStamina;

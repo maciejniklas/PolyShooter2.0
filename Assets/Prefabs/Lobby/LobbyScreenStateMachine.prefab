@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1877032674069295162}
   - component: {fileID: 1877032674069295163}
   m_Layer: 0
-  m_Name: LobbyStateMachine
+  m_Name: LobbyScreenStateMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,5 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e510fba55004a30ad60120cd012b24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: {fileID: 5310737694760659351, guid: 2ca84d3667cb80b47bdebbe830224a4e,
-    type: 3}
+  initialState: {fileID: 0}

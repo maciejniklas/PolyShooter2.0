@@ -3,8 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/WinScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/WinScreen.cs" afterDir="false" />
+<<<<<<< Updated upstream
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/CameraLobby.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lobby/CameraLobby.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/CameraLobby.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lobby/CameraLobby.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/Logo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Logo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/Logo.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Logo.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/LoadingIndicator Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LoadingIndicator Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/LoadingIndicator Variant.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LoadingIndicator Variant.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/PlayButton Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PlayButton Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/PlayButton Variant.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PlayButton Variant.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/UsernameInputField Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UsernameInputField Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/UI/UsernameInputField Variant.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UsernameInputField Variant.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Masters/GameLevelMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Masters/GameLevelMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Masters/SandboxLevelMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Masters/SandboxLevelMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Crosshair.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Crosshair.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySlider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ShootingWeaponHud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ShootingWeaponHud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SpectatorHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SpectatorHeader.cs" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,32 +44,11 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Patterns/BaseState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LobbyPageState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LobbyScreenState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/CanvasDontDestroy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LobbyStateMachine.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/IState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LobbyLoginState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/StateMachine.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LobbyPageState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/BaseState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/SingleSceneSingleton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Singleton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SceneType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SwitchToLobbyIfOffline.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayButtonInteractable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPoint.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerModule.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraControllModule.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraControlModule.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SceneType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SwitchToLobbyIfOffline.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/ReleaseCursorAfterButtonDown.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/GroundSensor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/TriggerSensor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Interfaces/ILiving.cs" />
@@ -58,27 +58,48 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/RemoteWeaponLookAtPoint.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Interfaces/IShootable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Interfaces/IAbleToEquip.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/MachineRifle.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Pistol.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Shotgun.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Interfaces/IWeapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Firearm.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Spectator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraMouseControlModule.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySlider.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/ShootingWeaponHud.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Crosshair.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/SpectatorHeader.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Characters/SpectatorModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/RoundTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/RotateAroundLocalPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersTimer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/MatchTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/WinScreen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPlayersCounter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Firearm.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/MachineRifle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Pistol.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Guns/Shotgun.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/StateMachine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/IStateMachine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Interfaces/IBaseState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Interfaces/IStateMachine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/BaseState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMonoBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LobbyScreenState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Interfaces/IState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/State.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMachineMonoBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMachine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Cursor/CursorStateMachine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Cursor/CursorLockState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Cursor/CursorAccessibleState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Cursor/CursorStateFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/ReleaseCursorAfterButtonDown.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayButtonInteractable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UsernameInputField.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/PlayerModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/LevelMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/GameLevelMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Masters/SandboxLevelMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Crosshair.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LivingPropertySlider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/ShootingWeaponHud.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/SpectatorHeader.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -154,6 +175,7 @@
       <workItem from="1610722588571" duration="8427000" />
       <workItem from="1610822558224" duration="603000" />
       <workItem from="1610869039428" duration="9014000" />
+      <workItem from="1610892840595" duration="14513000" />
     </task>
     <servers />
   </component>

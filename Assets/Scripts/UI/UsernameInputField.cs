@@ -1,4 +1,5 @@
-﻿using Photon.Pun;
+﻿using System.Collections;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,10 +11,10 @@ namespace UI
     [RequireComponent(typeof(InputField))]
     public class UsernameInputField : MonoBehaviour
     {
+        public static UsernameInputField Instance { get; private set; }
+        
         public event OnUsernameValidationEventHandler OnUsernameValidation;
         public delegate void OnUsernameValidationEventHandler(bool isValid);
-        
-        public static UsernameInputField Instance { get; private set; }
 
         private InputField _inputField;
         
@@ -21,7 +22,7 @@ namespace UI
 
         private void Awake()
         {
-            // Single scene singleton
+            // Singleton local
             if (Instance != null)
             {
                 Destroy(gameObject);
@@ -37,12 +38,7 @@ namespace UI
 
         private void Start()
         {
-            // Initialize text field of input field
-            if (!PlayerPrefs.HasKey(UsernamePrefKey)) return;
-            var defaultName = PlayerPrefs.GetString(UsernamePrefKey);
-            _inputField.text = defaultName;
-            PhotonNetwork.NickName = defaultName;
-            OnUsernameValidation?.Invoke(true);
+            StartCoroutine(InitializeUsernameInputField());
         }
 
         private void OnDestroy()
@@ -58,13 +54,31 @@ namespace UI
             if (string.IsNullOrWhiteSpace(username))
             {
                 OnUsernameValidation?.Invoke(false);
-                Notification.Instance.ErrorMessage("Enter valid username!");
+                Notification.ErrorMessage("Enter valid username! It cannot be null.");
                 return;
             }
 
             OnUsernameValidation?.Invoke(true);
             PhotonNetwork.NickName = username;
             PlayerPrefs.SetString(UsernamePrefKey, username);
+        }
+
+        private IEnumerator InitializeUsernameInputField()
+        {
+            yield return new WaitForSeconds(0.5f);
+            
+            // Initialize text field of input field
+            if (!PlayerPrefs.HasKey(UsernamePrefKey))
+            {
+                OnUsernameValidation?.Invoke(false);
+            }
+            else
+            {
+                var defaultName = PlayerPrefs.GetString(UsernamePrefKey);
+                _inputField.text = defaultName;
+                PhotonNetwork.NickName = defaultName;
+                OnUsernameValidation?.Invoke(true);
+            }
         }
     }
 }

@@ -7,6 +7,6 @@
         {
                 Lobby,
                 Sandbox,
-                Round
+                Game
         }
 }
