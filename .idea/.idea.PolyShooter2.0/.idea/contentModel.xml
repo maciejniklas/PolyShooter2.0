@@ -666,7 +666,7 @@
             <e p="LivingPlayersCounter.cs" t="Include" />
             <e p="LivingPropertySlider.cs" t="Include" />
             <e p="LivingPropertySliderType.cs" t="Include" />
-            <e p="LobbyPageStateMonoBehaviour.cs" t="Include" />
+            <e p="LobbyScreenState.cs" t="Include" />
             <e p="MatchTimer.cs" t="Include" />
             <e p="Notification.cs" t="Include" />
             <e p="PlayButtonInteractable.cs" t="Include" />

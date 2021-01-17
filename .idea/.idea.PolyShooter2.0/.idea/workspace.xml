@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Patterns/BaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMonoBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Patterns/BaseState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMonoBehaviour.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Patterns/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMachineMonoBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Patterns/StateMachine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMachineMonoBehaviour.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyPageState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyPageStateMonoBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyPageState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyPageStateMonoBehaviour.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/ConnectingPageState Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/ConnectingPageState Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/LobbyPageState.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/LobbyPageState.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/LobbyStateMachine.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/LobbyStateMachine.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/LoginPageState Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OldPrefabs/Lobby/LoginPageState Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMachineMonoBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMachineMonoBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyPageStateMonoBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyScreenState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyPageStateMonoBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyScreenState.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +35,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LobbyPageStateMonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LobbyScreenState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/SceneType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SwitchToLobbyIfOffline.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayButtonInteractable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPoint.cs" />
@@ -80,9 +86,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Interfaces/IStateMachine.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMachine.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/BaseState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMachineMonoBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Interfaces/IState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMonoBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/LobbyScreenState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Patterns/Implementations/StateMachineMonoBehaviour.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -158,7 +165,7 @@
       <workItem from="1610722588571" duration="8427000" />
       <workItem from="1610822558224" duration="603000" />
       <workItem from="1610869039428" duration="9014000" />
-      <workItem from="1610892840595" duration="5234000" />
+      <workItem from="1610892840595" duration="5914000" />
     </task>
     <servers />
   </component>

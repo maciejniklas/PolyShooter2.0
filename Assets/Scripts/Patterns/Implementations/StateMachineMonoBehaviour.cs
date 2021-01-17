@@ -10,7 +10,7 @@ namespace Patterns.Implementations
         [Tooltip("Initial state of state this state machine. Leave as null if there shouldn't be initial state.")]
         [SerializeField] private StateMonoBehaviour initialState;
         
-        public IState CurrentState { get; protected set; }
+        public IState CurrentState { get; private set; }
 
         private void Start()
         {
@@ -23,6 +23,11 @@ namespace Patterns.Implementations
         private void Update()
         {
             CurrentState?.UpdateState();
+        }
+        
+        public void ChangeState(StateMonoBehaviour newState)
+        {
+            ChangeState(newState as IState);
         }
         
         public void ChangeState(IState newState)
