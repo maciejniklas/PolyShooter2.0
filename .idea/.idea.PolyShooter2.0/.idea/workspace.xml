@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a498175f-be10-4f63-8bd2-85ef3461531f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PolyShooter2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/ReleaseCursorAfterButtonDown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/ReleaseCursorAfterButtonDown.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayButtonInteractable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayButtonInteractable.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +26,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Player/CameraControlModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SceneType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SwitchToLobbyIfOffline.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/GroundSensor.cs" />
@@ -80,6 +76,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Cursor/CursorStateFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/ReleaseCursorAfterButtonDown.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Masters/PhotonMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayButtonInteractable.cs" />
     </changedPaths>
   </component>
   <component name="NamedScopeManager">
@@ -155,7 +152,7 @@
       <workItem from="1610722588571" duration="8427000" />
       <workItem from="1610822558224" duration="603000" />
       <workItem from="1610869039428" duration="9014000" />
-      <workItem from="1610892840595" duration="9116000" />
+      <workItem from="1610892840595" duration="9550000" />
     </task>
     <servers />
   </component>
