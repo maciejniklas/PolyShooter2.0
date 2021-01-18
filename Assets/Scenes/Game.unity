@@ -2117,5 +2117,10 @@ PrefabInstance:
       propertyPath: timesUpText
       value: 
       objectReference: {fileID: 162161750}
+    - target: {fileID: 8762182405629432109, guid: ab59b5745f14691488337e3cb40f61da,
+        type: 3}
+      propertyPath: timeToEndOfMatchInSeconds
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab59b5745f14691488337e3cb40f61da, type: 3}

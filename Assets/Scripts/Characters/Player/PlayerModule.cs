@@ -152,6 +152,11 @@ namespace Characters.Player
         
         public void EquipWeapon(IWeapon weapon)
         {
+            if (EquippedWeapon != null && photonView.IsMine)
+            {
+                PhotonNetwork.Destroy(EquippedWeapon.Instance);
+            }
+            
             EquippedWeapon = weapon;
             EquippedWeapon.Owner = gameObject;
             
