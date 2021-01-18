@@ -37,11 +37,20 @@ namespace Weapons.Guns
                 // Notify listeners about shot
                 base.Attack();
             }
+            
+            muzzleFlashVFX.Stop();
+            muzzleFlashVFX.Play();
 
             if (!Physics.Raycast(shotStartPoint.position, shotStartPoint.forward, out Hit, Range)) return;
-            if (!Hit.transform.CompareTag("Player")) return;
-            var playerLiving = Hit.transform.GetComponent<ILiving>();
-            playerLiving.Hurt(Damage);
+            
+            if (Hit.transform.CompareTag("Player"))
+            {
+                var playerLiving = Hit.transform.GetComponent<ILiving>();
+                playerLiving.Hurt(Damage);
+            }
+
+            var hitVFXInstance = Instantiate(hitVFX, Hit.point, Quaternion.identity);
+            Destroy(hitVFXInstance, 1);
         }
     }
 }

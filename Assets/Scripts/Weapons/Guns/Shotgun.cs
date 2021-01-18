@@ -46,6 +46,9 @@ namespace Weapons.Guns
                 // Notify listeners about shot
                 base.Attack();
             }
+            
+            muzzleFlashVFX.Stop();
+            muzzleFlashVFX.Play();
 
             for (var index = 0; index < shellsPerShot; index++)
             {
@@ -63,9 +66,15 @@ namespace Weapons.Guns
                 if (!Physics.Raycast(shotStartPoint.position,
                     direction.normalized, out Hit, Range)) continue;
                 Debug.DrawLine(shotStartPoint.position, Hit.point, Color.yellow, 3);
-                if (!Hit.transform.CompareTag("Player")) continue;
-                var playerLiving = Hit.transform.GetComponent<ILiving>();
-                playerLiving.Hurt(Damage);
+            
+                if (Hit.transform.CompareTag("Player"))
+                {
+                    var playerLiving = Hit.transform.GetComponent<ILiving>();
+                    playerLiving.Hurt(Damage);
+                }
+
+                var hitVFXInstance = Instantiate(hitVFX, Hit.point, Quaternion.identity);
+                Destroy(hitVFXInstance, 1);
             }
         }
 
