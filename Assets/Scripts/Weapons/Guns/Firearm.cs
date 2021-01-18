@@ -2,6 +2,7 @@
 using Photon.Pun;
 using UI;
 using UnityEngine;
+using UnityEngine.VFX;
 using Weapons.Interfaces;
 
 namespace Weapons.Guns
@@ -15,6 +16,9 @@ namespace Weapons.Guns
         [SerializeField] protected float fireRate;
         [SerializeField] protected int initialMagazines;
         [SerializeField] protected float range;
+
+        [Header("VFX")]
+        [SerializeField] protected VisualEffect muzzleFlashVFX;
 
         [HideInInspector]
         public Transform shotStartPoint;

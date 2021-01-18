@@ -46,6 +46,9 @@ namespace Weapons.Guns
                 // Notify listeners about shot
                 base.Attack();
             }
+            
+            muzzleFlashVFX.Stop();
+            muzzleFlashVFX.Play();
 
             for (var index = 0; index < shellsPerShot; index++)
             {

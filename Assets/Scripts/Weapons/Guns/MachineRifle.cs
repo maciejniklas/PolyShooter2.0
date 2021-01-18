@@ -37,6 +37,9 @@ namespace Weapons.Guns
                 // Notify listeners about shot
                 base.Attack();
             }
+            
+            muzzleFlashVFX.Stop();
+            muzzleFlashVFX.Play();
 
             if (!Physics.Raycast(shotStartPoint.position, shotStartPoint.forward, out Hit, Range)) return;
             if (!Hit.transform.CompareTag("Player")) return;
