@@ -19,6 +19,7 @@ namespace Weapons.Guns
 
         [Header("VFX")]
         [SerializeField] protected VisualEffect muzzleFlashVFX;
+        [SerializeField] protected GameObject hitVFX;
 
         [HideInInspector]
         public Transform shotStartPoint;

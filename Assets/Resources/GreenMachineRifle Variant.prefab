@@ -18,6 +18,7 @@ MonoBehaviour:
   initialMagazines: 2
   range: 25
   muzzleFlashVFX: {fileID: 3086456390764516425}
+  hitVFX: {fileID: 3523390822731094049, guid: 41261c24aa570f1408147cc8834da7cc, type: 3}
   shotStartPoint: {fileID: 0}
 --- !u!1 &8545601390202185480
 GameObject:

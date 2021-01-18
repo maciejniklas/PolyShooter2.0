@@ -129,6 +129,7 @@ MonoBehaviour:
   initialMagazines: 2
   range: 10
   muzzleFlashVFX: {fileID: 1935843533003370614}
+  hitVFX: {fileID: 3523390822731094049, guid: 41261c24aa570f1408147cc8834da7cc, type: 3}
   shotStartPoint: {fileID: 0}
   shellsPerShot: 10
   shellsDispersion: 5

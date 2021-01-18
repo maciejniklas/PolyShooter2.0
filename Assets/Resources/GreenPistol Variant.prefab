@@ -129,6 +129,7 @@ MonoBehaviour:
   initialMagazines: 2
   range: 20
   muzzleFlashVFX: {fileID: 2883738930482987475}
+  hitVFX: {fileID: 3523390822731094049, guid: 41261c24aa570f1408147cc8834da7cc, type: 3}
   shotStartPoint: {fileID: 0}
 --- !u!1001 &307385421911047373
 PrefabInstance:
